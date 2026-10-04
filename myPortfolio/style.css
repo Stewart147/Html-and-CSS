@@ -1,0 +1,555 @@
+/* all element padding contained within element borders */
+* {
+    box-sizing: border-box;
+}
+
+/* removes any default padding and margin */
+html, body {
+    margin: 0;
+    padding: 0;
+    /* elements min-height 100% of container area */
+    min-height: 100%;
+}
+
+
+/* header styling */
+
+header {
+    width: 100%;
+    height: 44px;
+    background-color: #7890a3;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    /* position above lower index elements */
+    z-index: 20;
+}
+
+
+/* logo styling */
+
+.logo {
+    display: flex;
+    /* allows text to sit along a common baseline useful for different sized text */
+    align-items: baseline;
+    color: white;
+    margin: 0;
+    padding: 0;
+    /* prevents Logo text from wraping onto another line */
+    white-space: nowrap;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.logo h3 {
+    margin: 0;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+
+/* Header navigation */
+
+header nav {
+    margin-left: 25px;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    /* creates 25px space */
+    gap: 25px;
+    /* removes bullets */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav li {
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    /* makes link behave like a block element, easier padding control */
+    display: block;
+    color: white;
+    background-color: #08779b;
+    border: 1px solid #000;
+    /* 6px top and bottom 9px left and right */
+    padding: 6px 9px;
+    font-size: 12px;
+    /* removes underline */
+    text-decoration: none;
+}
+
+header nav a:hover {
+    background-color: #0a91bb;
+}
+
+
+/* top-social styling */
+
+ .top-social {
+    /* pushes icons to the right automatically taking up available space */
+    margin-left: auto;
+}
+
+.top-social .social {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.top-social a {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    height: 30px;
+    width: 30px;
+    background-color: #3283a2;
+}
+
+.top-social a:hover {
+    color: aqua;
+} 
+
+
+/* main-section styling */
+
+.main-section {
+    width: 100%;
+   /* lets you calculate viewport height ie ~ 44px header 60px footer = 98px rest mid-section */
+    min-height: calc(100vh - 104px);
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* left side bar styling */
+
+.left-border {
+    width: 27px;
+    /* short for flex-grow=0, flex-shrink=0, flex-basis=27px ie keep width at 27px and don't
+    let Flexbox grow or shrink */
+    flex: 0 0 27px;
+    background-color: #7890a3;
+}
+
+
+/* central image section */
+
+.mid-section {
+    /* flex: 1; tells mid-section to take up any available space */
+    flex: 1;
+    min-width: 0;
+    /* lets you calculate viewport height ie ~ 44px header 60px footer = 98px rest mid-section */
+    min-height: calc(100vh - 104px); 
+    /* height: auto; */
+    background-image: url("code8.jpg");
+    /* make the image cover the entire element */
+    background-size: cover;
+    background-position: center;
+    /* stops image from repeating */
+    background-repeat: no-repeat;
+ /*   position: relative; */
+    /* 80px top, 45px right and left, 80px bottom */
+    padding: 80px 45px 80px;
+}
+
+
+/* right side bar styling */
+
+.right-border {
+    width: 27px;
+    /* short for flex-grow=0, flex-shrink=0, flex-basis=27px ie keep width at 27px and don't
+    let Flexbox grow or shrink */
+    flex: 0 0 27px;
+    background-color: #7890a3;
+}
+
+
+/* portfolio heading styling */
+
+.heading {
+    /* displays inline but makes it easier to apply padding */
+    display: inline-block;
+    background-color: #f29b9f;
+    color: white;
+    padding: 16px 38px;
+    margin-bottom: 30px;
+    font-size: 19px;
+    /* controls line height spacing */
+    line-height: 1;
+    /* creates shadow x=0 y=4 px blur=8px rgba=color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+ .paragraph {
+            width: 200px;
+            height: 460px; 
+            background-color: rgb(245, 166, 166);
+             /* creates shadow x=0 y=4 px blur=8px rgba=color */
+            box-shadow: 4px 4px 15px rgba(5, 5, 5, 0.8);
+            color: white;
+            margin-left: 100px;
+            margin-top: 60px;
+            margin-bottom: 40px;
+            padding: 16px;
+        }
+
+#ch {
+    display: none;        /* hides checkbox as used as a hack only use for fault finding */
+}
+        
+#ch:checked ~ .content {    /* approx sign is a sibling selector */
+    display: block;
+ }
+
+ #ch:checked ~ label {
+    display: none;
+ }
+
+ .content {
+    display: none;        /* content hidden to begin with */
+ }
+
+label {
+    display: inline-block;
+    /* changes mouse cursor to a hand when hovered over */
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(228, 125, 125);
+    padding: 3px 13px;
+    /* rounds the corners larger number bigger curve */
+    border-radius: 3px;
+    margin-top: 12px;
+}
+
+
+ .button {
+    background-color: transparent;
+    height: 80px;
+    width: 500px;
+    margin: 20px;
+    margin-left: 100px;
+} 
+
+.button1 {
+    /* changes mouse cursor to a hand when hovered over */
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(245, 166, 166);
+    /* rounds the corners larger number bigger curve */
+    border-radius: 3px;
+    padding: 10px 30px;
+    
+ }
+
+.button2 {
+    /* changes mouse cursor to a hand when hovered over */
+    cursor: pointer;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(245, 166, 166);
+    /* rounds the corners larger number bigger curve */
+    border-radius: 3px;
+    padding: 10px 30px;
+    margin-left: 20px;
+}
+
+.button1:hover {
+    background-color: #fff;
+    color: black;
+    border-color: black;
+}
+
+.button2:hover {
+    background-color: #fff;
+    color: black;
+    border-color: black;
+}
+
+
+/* footer styling */
+
+footer {
+     width: 100%;
+     height: 54px;
+     background-color: #7890a3;
+     /* align center axis */
+     display: flex;
+     align-items: center;
+     padding: 0 140px;
+     margin-bottom: 6px;
+   /*  position: relative; */
+     z-index: 20;
+}
+
+
+/* footer nav styling */
+
+.footer-nav {
+     margin: 0;
+     padding: 0;
+ }
+
+.footer-nav ul {
+    /* align center axis */
+     display: flex;
+     align-items: center;
+     gap: 25px;
+     /* removes the default bullets */
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+
+.footer-nav li {
+     margin: 0;
+     padding: 0;
+}
+
+.footer-nav a {
+     display: block;
+     color: white;
+     background-color: #08779b;
+     border: 1px solid #000;
+     padding: 6px 9px;
+     font-size: 12px;
+     text-decoration: none;
+}
+
+.footer-nav a:hover {
+     background-color: #0a91bb;
+}
+
+
+/* footer social styling */
+
+.footer-social {
+    /* pushes icons to the right automatically taking up available space */
+    margin-left: auto;
+    /* aligns center vertically */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 24px;
+    /* removes underline */
+    text-decoration: none;
+    background-color: #3283a2;
+}
+
+.footer-social a:hover {
+    color: aqua;
+}
+
+
+/* responsive design for tablet 900px or less */
+
+@media (max-width: 900px) {
+
+    header {
+        /* reduce padding 0 40px to 0 20px */
+        padding: 0 20px;
+    }
+
+    header nav ul {
+        /* reduce gap from 25px to 10px */
+        gap: 10px;
+    }
+
+    footer {
+        /* less side padding 140px to 40px */
+        padding: 0 40px;
+    }
+
+    .mid-section {
+        /* less side padding 45px to 30px */
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .button {
+        left: 57px;
+    }
+}
+
+
+/* mobile  700px or less */
+
+@media (max-width: 700px) {
+
+    header {
+        height: auto;
+        /* min-height of header */
+        min-height: 55px;
+        padding: 8px 15px;
+        /* move onto another line if there isn't enough space */
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+
+    header nav {
+        margin-left: 5px;
+    }
+
+
+    header nav ul {
+        gap: 5px;
+          /* move onto another line if there isn't enough space */
+        flex-wrap: wrap;
+    }
+
+
+    header nav a {
+        padding: 5px 7px;
+        font-size: 10px;
+    }
+
+
+    .top-social {
+        margin-left: 5px;
+    }
+
+
+    /* Smaller side bars */
+
+    .left-border, .right-border {
+        width: 15px;
+        /* fix size to 15px */
+        flex-basis: 15px;
+    }
+
+
+    /* Central image */
+
+    .mid-section {
+        min-height: 600px;
+        padding: 50px 25px 70px;
+    }
+
+
+    /* Portfolio heading */
+
+    .heading {
+        font-size: 17px;
+        padding: 14px 25px;
+    }
+
+
+    /* Buttons */
+
+    .button {
+        /* automatically fill available horizontal space */
+        width: auto;
+        margin: 20px 0 0 100px;
+} 
+
+
+    /* Footer */
+
+    footer {
+        /* automatically fill available vertical space */
+        height: auto;
+        min-height: 60px;
+        padding: 10px 20px;
+        /* allow content to wrap to next line */
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+
+    .footer-nav ul {
+        gap: 5px;
+        /* allow content to wrap to next line */
+        flex-wrap: wrap;
+    }
+
+
+    .footer-nav a {
+        padding: 5px 7px;
+        font-size: 10px;
+    }
+
+
+    .footer-social {
+        margin-left: auto;
+    }
+}
+
+
+/* very small phones  450px or less */
+
+@media (max-width: 450px) {
+
+    header {
+        padding: 8px 10px;
+    }
+
+
+    .logo h1 {
+        font-size: 14px;
+    }
+
+
+    .logo h3 {
+        font-size: 9px;
+    }
+
+
+    header nav ul {
+        gap: 4px;
+    }
+
+
+    header nav a {
+        /* smaller navigation links */
+        padding: 4px 5px;
+        font-size: 9px;
+    }
+
+
+    .left-border, .right-border {
+        /* reduce sidebar widths */
+        width: 10px;
+        /* set fixed width 10px */
+        flex-basis: 10px;
+    }
+
+
+    .mid-section {
+        /* 35px top, 15px left and right, 60px bottom */
+        padding: 35px 15px 60px;
+    }
+
+
+    .heading {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+
+     .button {
+        margin: 20px 0 0 40px;
+    }
+
+
+
+
+    footer {
+        padding: 10px 15px;
+    }
+}
