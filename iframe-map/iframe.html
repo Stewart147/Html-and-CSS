@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- tells the browser how to interpret characters and symbols -->
+        <meta charset="UTF-8">
+        <!-- makes websites work on different screen sizes ie mobile -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Embedded Content</title>
+        <style>
+
+            /* main map container any content will be referenced to it as it is position relative */
+            .iframe-container{
+                position: relative;
+                width: 100%;
+                height: 0;
+                padding-bottom: 56.25%;  /* height 0 padding-bottom 56.25% create 16:9 aspect ratio */
+                margin: 2rem 0;
+                /* stops content overflowing outside the container */
+                overflow: hidden;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba( 0, 0, 0, 0.1)
+            }
+
+            /* styling the iframe */
+
+            .iframe-container iframe{
+                /* positioned absolute within the main reference relative container */
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+
+            }
+
+            /* Responsive adjustments */
+
+            /* if the screen is 768px or smaller make the map taller */
+
+            @media(max-width: 768px) {
+                .iframe-container{
+                    padding-bottom: 75%;  /* Adjust aspect ratio for mobile */
+                }
+            } 
+
+            aside{
+                text-align: center;
+            }
+            
+            p{
+                text-align: center;
+                font-style: italic;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header>
+           <h1> Our Location </h1>
+        </header>
+
+       <!-- An iframe allows you to display another webpage or service inside your webpage. -->
+
+        <section class="iframe-container">   
+             
+         <iframe width="300" height="200" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" sandbox="allow-scripts allow-same-origin allow-popups" scrolling="no" marginheight="0"marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=%20broughty%20ferry%20court%20dd48uf+(My%20Portfolio)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+          <p>Your browser does not support iframes. Please use another browser.
+           <a href="https://www.gps.ie/collections/sports-gps/">Location page</a>
+          </p>
+         </iframe>
+
+        </section>
+ 
+        <aside>
+            <h3>Reload Map or View Full screen </h3>
+
+            <div class="iframe-controls">
+                <button onclick="reloadFrame()">Reload Content</button>
+                <button onclick="toggleFullscreen()">Fullscreen</button>
+            </div>
+
+
+        </aside>
+
+        <footer>
+            <p>&copy Websites inc 2025</p>
+        </footer>
+
+        <!-- JavaScript -->
+
+        <script>
+
+            /* function is called when Reload content button is pressed */
+
+            function reloadFrame() {
+                const frame = document.querySelector('iframe');
+                frame.src = frame.src;
+            }
+
+             /* function is called when Fullscreen button is pressed */
+
+            function toggleFullscreen() {
+                const frame = document.querySelector('iframe');
+                if (frame.requestFullscreen) {
+                    frame.requestFullscreen();
+                }
+            }
+
+        </script>
+        
+    </body>
+
+    </html>
