@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 8</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+         body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;         
+         }
+
+          /* Hero Section */
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;   /* min height = height of container 100% */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+         .hero::before {
+            content: '';      
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+         }
+
+         .logo {
+             position: absolute;
+             top: 2rem;
+             left: 2rem;
+             font-size: 1.8rem;
+             font-weight: 800;
+             color: white;
+             z-index: 10;
+         }
+
+          .hero-content {
+             max-width: 800px; 
+             padding: 0 2rem;
+             z-index: 2; 
+             animation: fadeInUp 1s ease-out;
+          }
+
+           .hero-icon {
+               width: 100px;
+               height: 100px; 
+               border-radius: 50%;
+               padding: 40px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               margin: 0 auto 2rem;          
+               font-size: 1.6rem;
+               color: #667eea;
+               background-color: #fff;
+               animation: pulse 2s infinite;  
+
+           } 
+
+            .hero h1 {
+                font-size: clamp(2rem, 5vw, 4rem);     
+                margin-bottom: 1rem;
+                font-weight: 700;
+                letter-spacing: -0.02em;
+            }
+
+             .hero p {
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+                opacity: 0.9;
+             }
+
+             .cta-button {
+                 background: rgba(255, 255, 255, 0.2);
+                 color: white;
+                 padding: 1rem 2.5rem;
+                 font-size: 1.1rem;
+                 border-radius: 50px;
+                 cursor: pointer;
+                 transition: all 0.3s ease;  
+                 backdrop-filter: blur(10px);  
+                 text-decoration: none;
+                 display: inline-block;   
+             }
+
+            .cta-button:hover {
+                  background: white;
+                  color: #667eea;
+                  transform: translateY(-2px);               
+                  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            }
+
+             /* Services Section */
+
+            .services {
+                padding: 6rem 0;          
+                background-color: orange;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;             
+                padding: 0 2rem;              
+            }
+
+            .section-title {
+                text-align: center;
+                font-size: clamp(2rem, 4vw, 3rem); 
+                margin-bottom: 1rem;
+                color: #2d3748;
+                font-weight: 700;
+
+            }
+
+            .section-subtitle {
+                 text-align: center;
+                 color: #64748b;
+                 max-width: 600px;
+                 margin: 0 auto 3rem;
+                 font-size: 1.1rem;
+            }
+
+            .services-grid {
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+                  gap: 2rem;
+                  margin-top: 3rem;
+            }
+
+            .service-card {
+                   background: white;
+                   padding: 2rem;
+                   border-radius: 16px;
+                   text-align: center;
+                   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+                   transition: all 0.3s ease;
+                   border: 1px solid #e2e8f0;
+            }
+
+            .service-card:hover {
+                    transform: translateY(-8px);                  /* moves -8px on y-axis up/down on hover */
+                    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+           }
+
+            .service-icon {
+                  width: 60px;
+                  height: 60px;
+                  background: #667eea;
+                  color: white;
+                  border-radius: 50%;
+                /*  padding: 1rem; */
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin: 0 auto 1rem;     
+                  font-size: 0.8rem;
+            }
+
+            .service-card h3 {
+                  font-size: 1.3rem;
+                  margin-bottom: 0.5rem;
+                  color: #2d3748;
+            }
+
+            .service-card p {
+                   color: #64748b;
+                   font-size: 0.95rem;
+            }
+
+
+       /* Products Section */
+
+            .products {
+                  padding: 6rem 0;
+                  background-color: lightgreen;
+            }
+
+
+            .products-grid {
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                  gap: 2rem;
+                  margin-top: 3rem;
+            }
+
+            .product-card {
+                   background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+                   border-radius: 16px;
+                   overflow: hidden;           
+                   transition: all 0.3s ease;
+            }
+
+            .product-card:hover {
+                    transform: scale(1.02);                     
+                    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            }
+
+            .product-image {
+                    height: 200px;
+                    background: linear-gradient(45deg, #667eea, #764ba2);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    font-size: 3rem;
+            }
+
+            .product-content {
+                   padding: 1.5rem;
+            }
+
+            .product-content h3 {
+                  font-size: 1.2rem;
+                  margin-bottom: 0.5rem;
+                  color: #2d3748;
+            }
+
+            .product-content p {
+                  color: #64748b;
+                  font-size: 0.9rem;
+            }
+
+              /* Features Section */
+
+           .features {
+                 padding: 6rem 0;
+                 background-color: lightyellow;
+            }
+
+              .features-container {
+                       display: grid;
+                       grid-template-columns: 1fr 1fr;
+                       gap: 4rem;
+                       align-items: center;
+            }
+
+             .features-image {
+                     height: 400px;
+                     background: linear-gradient(135deg, #667eea, #764ba2);
+                     border-radius: 16px;
+                     display: flex;
+                     align-items: center;
+                     justify-content: center;
+                     color: white;
+                     font-size: 4rem;
+            }
+
+         
+
+             .feature-item {
+                   margin-bottom: 2rem;
+            }
+
+              .feature-item h3 {
+                   font-size: 1.3rem;
+                   margin-bottom: 0.5rem;
+                   color: #2d3748;
+            }
+
+               .feature-item p {
+                   color: #64748b;
+            }
+
+             /* Testimonials Section */
+
+               .testimonials {
+                   padding: 6rem 0;
+                   background-color: lightskyblue;
+            }
+
+             .testimonials-grid {
+                       display: grid;
+                       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                       gap: 2rem;
+                       margin-top: 3rem;
+            }
+
+             .testimonial-card {
+                  background: #f8fafc;
+                  padding: 2rem;
+                  border-radius: 16px;
+                  border-left: 4px solid #667eea;
+            }
+
+             .testimonial-avatar {
+                        width: 50px;
+                        height: 50px;
+                        background: #667eea;
+                        border-radius: 50%;
+                        margin-bottom: 1rem;
+             }
+
+            .testimonial-name {
+                     font-weight: 600;
+                     color: #2d3748;
+                     margin-bottom: 0.5rem;
+            }
+
+            .testimonial-text {
+                   color: #64748b;
+                   font-style: italic;
+            }
+
+              /* Footer */
+
+            .footer {
+                background: #2d3748;
+                color: white;
+                padding: 4rem 0 2rem;
+            }
+
+            .footer-content {
+                    display: grid;
+                    grid-template-columns: 2fr 1fr 1fr;
+                    gap: 3rem;
+                    margin-bottom: 2rem;
+            }
+
+            .footer-section h3 {
+                  margin-bottom: 1rem;
+                  color: #e2e8f0;
+            }
+
+
+            .contact-form {
+                   display: flex;
+                   flex-direction: column;
+                   gap: 1rem;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                    background: #4a5568;
+                    border: none;
+                    padding: 0.75rem;
+                    border-radius: 8px;
+                    color: white;
+            }
+
+            .contact-form input::placeholder,
+            .contact-form textarea::placeholder {
+               color: #a0aec0;
+            }
+
+            .contact-form button {
+                 background: #667eea;
+                 color: white;
+                 border: none;
+                 padding: 0.75rem;
+                 border-radius: 8px;
+                 cursor: pointer;
+                 transition: background 0.3s;  /* check out */
+            }
+
+            .contact-form button:hover {
+                   background: #5a67d8;
+            } 
+
+            .footer-section ul {
+                   list-style: none;
+            }
+
+            .footer-section ul li {
+                margin-bottom: 0.5rem;
+            }
+
+            .footer-section ul li a {
+                       color: #a0aec0;
+                       text-decoration: none;
+                       transition: color 0.3s;
+            }
+
+            .footer-section ul li a:hover {
+                             color: #667eea;
+            }
+
+             .footer-logo {
+                  font-size: 1.5rem;
+                  font-weight: 800;
+                  color: white;
+                  margin-bottom: 1rem;
+            }
+
+             .footer-bottom {
+                 text-align: center;
+                 padding-top: 2rem;
+                 border-top: 1px solid #4a5568;
+                 color: #a0aec0;
+            }
+
+              /* Animations */
+
+            @keyframes fadeInUp {
+                 from {
+                   opacity: 0;
+                   transform: translateY(30px); 
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+         @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);      
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+
+          /* Responsive Design */
+
+        @media (max-width: 768px) {
+            .features-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+             .logo {
+                position: relative;
+                top: 0;
+                left: 0;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+
+              .hero {
+                padding-top: 2rem;
+            }
+
+        } 
+
+    </style>
+
+
+</head>
+<body>
+
+     <!-- Hero Section -->
+
+    <section class="hero">
+        <div class="logo">Sports Plus +</div>
+        <div class="hero-content">
+            <div class="hero-icon">Sports+
+             <!--  <img width="48" height="48" src="https://img.icons8.com/pulsar-line/48/sports.png" alt="sports"/> -->
+            </div>
+            <h1>Sports Solutions For Everyone</h1>
+            <p>We provide cutting-edge  sports solutions for Sports Clubs and individual needs.
+               We provide high quality branded sports equipment to meet your needs.
+            </p>
+            <a href="#services" class="cta-button">Explore Our Services</a>
+        </div>
+    </section>
+
+     <!-- Services Section -->
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">We offer high quality sports equipment tailored to all your sporting needs</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">Sports Plus +</div>
+                    <h3>Sports Solutions</h3>
+                    <p>Comprehensive sports planning and analysis to optimize your sports performance and health strategies.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">Sports Plus +</div>
+                    <h3>Data Analytics</h3>
+                    <p>Transform your data into actionable insights with our advanced analytics and sports intelligence solutions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">Sports Plus +</div>
+                    <h3>Process Optimization</h3>
+                    <p>Streamline your sport activities and improve  your health efficiency through our proven process optimization methodologies.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">Sports Plus +</div>
+                    <h3>Health Safety Solutions</h3>
+                    <p>Protect your sports business activities with comprehensive solutions and risk management strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Products Section -->
+
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Examples of Services or Products</h2>
+            <p class="section-subtitle">Discover our range of innovative solutions designed to captivate users on first attempt. Should the first attempt fail, our backup plan ensures success.</p>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">Sports Plus +</div>
+                    <div class="product-content">
+                        <h3>Mobile Solutions</h3>
+                        <p>Custom mobile applications built for performance and user experience.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">Sports Plus +</div>
+                    <div class="product-content">
+                        <h3>Sport+ Equipment</h3>
+                        <p>High quality sports equipment tailored to individual or business needs.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">Sports Plus +</div>
+                    <div class="product-content">
+                        <h3>Club Integration</h3>
+                        <p>Free aacces to other nationwide sports facilities with just one membership card.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">Sports Plus +</div>
+                    <div class="product-content">
+                        <h3>Sports+ Data Analytics</h3>
+                        <p>Our Data Analytics sports facilities helps monitor your fitness progress.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">Sports Plus +</div>
+                    <div class="product-content">
+                        <h3>Analytics Dashboard</h3>
+                        <p>Real-time live Data Analysis and reporting dashboards.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">Sports Plus +</div>
+                    <div class="product-content">
+                        <h3>Custom Tools</h3>
+                        <p>Bespoke Sport+ solutions tailored to your specific requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Features Section -->
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Take a Look at Our Awesome Products</h2>
+            <div class="features-container">
+                <div class="features-list">
+                    <div class="feature-item">
+                        <h3>Performance Optimization</h3>
+                        <p>Our Sports+ packages are built for fitness and wellbeing optimisation, ensuring optimal performance and peak fitness goals.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Workouts and Classes </h3>
+                        <p>Pre designed Workouts to improve fitness levels and improve body mass and cardivascular improvements.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>24/7 Support</h3>
+                        <p>Our dedicated support team is available around the clock to ensure your sporting needs run smoothly.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Innovation Focus</h3>
+                        <p>Stay ahead of the competition with cutting-edge  sports technology and innovative solutions.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Security First</h3>
+                        <p>All our products are built with sports needs as a priority, protecting your health and wellbeing.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>User Experience</h3>
+                        <p>Quality equipment and seamless user experiences across all our sports equipment and workouts.</p>
+                    </div>
+                </div>
+                <div class="features-image">
+                    Sports Plus +
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Testimonials Section -->
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Testimonials</h2>
+            <p class="section-subtitle">Here's where you can try and captivate the users by providing them with feedback from your previous clients. These come in a form of star ratings representing great service and 5-star experience.</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar"></div>
+                    <div class="testimonial-name">Sarah Johnson</div>
+                    <div class="testimonial-text">"Sport+ transformed my fitness levels completely. The service experience was exceptional, and i've seen a 40% increase in my fitness. Highly recommend their expertise and professionalism."</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar"></div>
+                    <div class="testimonial-name">Michael Chen</div>
+                    <div class="testimonial-text">"Working with Sport+ has been a game-changer for our family. Their innovative solutions and dedicated support team helped us achieve our fitness and wellbeing goals ahead of schedule."</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar"></div>
+                    <div class="testimonial-name">Emily Rodriguez</div>
+                    <div class="testimonial-text">"The level of expertise and attention to detail that Sport+ brings is unmatched. They understood our needs perfectly and delivered solutions that exceeded our expectations."</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">Sport Plus +</div>
+                    <p style="color: #a0aec0; margin-bottom: 1rem;">Send us a message and we'll get back to you within 24 hours.</p>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="4" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+                <div class="footer-section">
+                    <h3>Sitemap</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <div class="footer-logo" style="margin-bottom: 2rem;">Sport Plus +</div>
+                    <p style="color: #a0aec0; margin-bottom: 1rem;">Tel: (555) 123-4567</p>
+                    <p style="color: #a0aec0;">Email: contact@sportplus.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sports Plus +. All rights reserved worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- javascript later does scrolling effect plus form entry simulation -->
+
+
+ <script>
+
+        // Smooth scrolling for navigation links
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+       // Contact form submission
+
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const button = this.querySelector('button');
+            const originalText = button.textContent;
+            
+            button.textContent = 'Sending...';
+            button.disabled = true;
+            
+            // Simulate form submission
+
+            setTimeout(() => {
+                button.textContent = 'Message Sent!';
+                this.reset();
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.disabled = false;
+                }, 2000);
+            }, 1500);
+        });
+
+        // Add scroll-triggered animations
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+
+        document.querySelectorAll('.service-card, .product-card, .testimonial-card, .feature-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';  /* moves up 30px on y axis */
+            observer.observe(el);
+        });
+        
+    </script>
+
+  
+</body>
+</html>
