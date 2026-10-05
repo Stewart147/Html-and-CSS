@@ -1,0 +1,562 @@
+  
+  .container-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 840px 500px 760px 400px 400px 640px 200px 600px;
+            gap: 10px;
+        }
+
+
+        .sectionA {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+            border: 1px solid black;
+
+            display: flex;
+            flex-direction: column;
+            background-image: url(images/code8.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 0px 20px;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+        }
+
+        .sectionB {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            border: 1px solid black;
+            background-color: tan;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+        }
+
+        .sectionC {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            border: 1px solid black;
+            background-color: red;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            padding-bottom: 30px;
+            color: #fff;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+        }
+
+        .sectionD {
+            grid-column: 2 / 3;
+            grid-row: 2 / 5;
+            border: 1px solid black;
+            background-color: burlywood;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            color: #fff;
+            padding: 0px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+        }
+
+        .sectionE {
+            grid-column: 1 / 2;
+            grid-row: 4 / 6;
+            border: 1px solid black;
+            background-color: green;
+            display: flex;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+        }
+
+        .sectionF {
+            grid-column: 2 / 3;
+            grid-row: 5 / 7;
+            border: 1px solid black;
+            background-color: pink;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center; 
+            color: #fff;
+            padding: 0px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px; 
+        }
+
+
+        .sectionG {
+            grid-column: 1 / 2;
+            grid-row: 6 / 8;
+            border: 1px solid black;
+            background-color: brown;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+        }
+
+        .sectionH {
+            grid-column: 2 / 3;
+            grid-row: 7 / 9;
+            border: 1px solid black;
+            background-color: cyan;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+        }
+
+        .topA {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: 300px;
+          padding-top: 16px;
+        }
+
+        .topA h1 {
+          padding-top: 30px;
+        }
+
+       
+
+        .bottomA {
+          display: flex;
+          flex-direction: column;
+          justify-content: end;
+          align-items: center;
+          height: 500px;
+        }
+
+        .bottomA p {
+           display: flex;
+          flex-direction: column;
+          justify-content: end;
+        }
+
+        .sectionB h1 {
+            padding-top: 20px;
+        }
+
+        .sectionB figure {
+            padding: 0;
+            margin: 0;       /* removes extra padding and margin from figure element */
+        }
+
+         .imgB { 
+            width: 200px;
+            height: 300px; 
+            object-fit:cover;
+            box-shadow: rgba(0, 0, 0, 0.2);
+         } 
+
+          .imgB:hover {
+            opacity: 0.7;
+         }
+
+          .sectionC figure {
+            padding: 0;
+            margin: 0;       /* removes extra padding and margin from figure element */
+        }
+
+
+      
+         .imgC { 
+            width: 200px;
+            height: 300px; 
+            object-fit:cover;
+            padding-right: 20px;
+            box-shadow: rgba(0, 0, 0, 0.2);
+         } 
+
+          .imgC:hover {
+            opacity: 0.7;
+         }
+
+         .topC {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+         }
+
+         .bottomC {
+            display: flex;
+            margin: auto;
+         }
+
+         .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+         }
+   
+
+          .sectionD figure {
+            padding: 0;
+            margin: 0;       /* removes extra padding and margin from figure element */
+        }
+
+         .imgD { 
+            width: 50%;
+            height: 400px; 
+            object-fit: cover;
+            box-shadow: rgba(0, 0, 0, 0.2);
+            padding-left: 160px;
+         } 
+
+          .imgD:hover {
+            opacity: 0.7;
+         }
+
+
+         .sectionE figure {
+            padding: 0;
+            margin: 0;       /* removes extra padding and margin from figure element */
+        }
+
+
+          .imgE { 
+            width: 100%;
+            height: 400px; 
+            object-fit: cover;
+            box-shadow: rgba(0, 0, 0, 0.2);
+         } 
+
+          .imgE:hover {
+            opacity: 0.7;
+         }
+
+           .sectionF figure {
+            padding: 0;
+            margin: 0;       /* removes extra padding and margin from figure element */
+        }
+
+           .imgF { 
+            width: 50%;
+            height: 400px; 
+            object-fit: contain;
+            box-shadow: rgba(0, 0, 0, 0.2);
+            padding-left: 150px;
+            padding-top: 60px;
+         } 
+
+          .imgF:hover {
+            opacity: 0.7;
+         }
+
+      
+
+           .sectionG figure {
+            padding: 0;
+            margin: 0;       /* removes extra padding and margin from figure element */
+        }
+
+           .imgG { 
+            width: 50%;
+            height: 400px; 
+            object-fit: cover;
+           box-shadow: rgba(0, 0, 0, 0.2);
+         } 
+
+          .imgG:hover {
+            opacity: 0.7;
+         } 
+
+         .topG i {
+          padding-top: 30px;
+         }
+
+         /* readme text show more/less text */
+
+            #ch {
+            display: none;        /* hides checkbox as used as a hack only use for fault finding */
+        }
+        
+        #ch:checked ~ .content {    /* approx sign is a sibling selector */
+            display: block;
+        }
+
+        #ch:checked ~ label {
+            display: none;
+        }
+
+        .content {
+            display: none;        /* content hidden to begin with */
+        }
+
+           /* readme text show more/less text */
+
+            #ch1 {
+            display: none;        /* hides checkbox as used as a hack only use for fault finding */
+        }
+        
+        #ch1:checked ~ .content1 {    /* approx sign is a sibling selector */
+            display: block;
+        }
+
+        #ch1:checked ~ label {
+            display: none;
+        }
+
+        .content1 {
+            display: none;        /* content hidden to begin with */
+        }
+
+
+   /* readme text show more/less text */
+
+            #ch2 {
+            display: none;        /* hides checkbox as used as a hack only use for fault finding */
+        }
+        
+        #ch2:checked ~ .content2 {    /* approx sign is a sibling selector */
+            display: block;
+        }
+
+        #ch2:checked ~ label {
+            display: none;
+        }
+
+        .content2 {
+            display: none;        /* content hidden to begin with */
+        }
+
+           /* readme text show more/less text */
+
+            #ch3 {
+            display: none;        /* hides checkbox as used as a hack only use for fault finding */
+        }
+        
+        #ch3:checked ~ .content3 {    /* approx sign is a sibling selector */
+            display: block;
+        }
+
+        #ch3:checked ~ label {
+            display: none;
+        }
+
+        .content3 {
+            display: none;        /* content hidden to begin with */
+        }
+
+             /* readme text show more/less text */
+
+            #ch4 {
+            display: none;        /* hides checkbox as used as a hack only use for fault finding */
+        }
+        
+        #ch4:checked ~ .content4 {    /* approx sign is a sibling selector */
+            display: block;
+        }
+
+        #ch4:checked ~ label {
+            display: none;
+        }
+
+        .content4 {
+            display: none;        /* content hidden to begin with */
+        }
+
+
+        /* readme text show more/less text */
+
+            #ch5 {
+            display: none;        /* hides checkbox as used as a hack only use for fault finding */
+        }
+        
+        #ch5:checked ~ .content5 {    /* approx sign is a sibling selector */
+            display: block;
+        }
+
+        #ch5:checked ~ label {
+            display: none;
+        }
+
+        .content5 {
+            display: none;        /* content hidden to begin with */
+        }
+
+
+
+           label {
+          margin-top: 20px;
+          padding: 8px 10px;
+          background-color: aquamarine;
+          border-radius: 10px;
+          box-shadow: rgba(0, 0, 0, 0.2);
+         }
+
+            label:hover {
+             background-color: #81e462;
+             border: darkgrey;
+             color: #000;
+         } 
+
+         .button-follow {
+            margin-top: 20px;
+            padding: 8px 10px;
+            background-color: aquamarine;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.2);
+         }
+
+         .button-follow:hover {
+            background-color: #81e462;
+             border: darkgrey;
+             color: #000;
+         }
+
+     
+            .imgH { 
+            width: 80%;
+            height: 400px; 
+            object-fit: contain;
+            box-shadow: rgba(0, 0, 0, 0.2);
+            padding-left: 66px;
+         } 
+
+          .imgH:hover {
+            opacity: 0.7;
+         } 
+
+           .logo {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px ;
+            box-shadow:rgba(0, 0, 0, 0.2);
+            padding: 10px;
+         }
+
+         .topE {
+          width: 48%;
+          padding: 20px;
+         }
+
+         .bottomE {
+          width: 48%;
+          padding: 30px 20px;
+         }
+
+         .topG {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: start;
+          padding-top: 30px;
+         }
+
+         .bottomG {
+          display: flex;
+          flex-direction: row;
+          justify-content:space-between;
+          align-items: start;
+          padding-right: 40px;
+          padding-left: 20px;
+         } 
+
+         .midG {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+         }
+
+         .midG h6 {
+            position: relative;
+            bottom: 40px;
+         }
+
+         .midG p {
+           position: relative;
+            bottom: 60px;
+
+         }
+
+         .bottomG h3 {
+            padding: 0 10px;
+         }
+
+         .topH {
+          display: flex;
+          justify-content:space-evenly;
+          align-items: center;
+          padding-top: 30px;
+         }
+
+         .bottomH {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+         }
+
+         .bottomH figure {
+          margin: 0;
+          padding: 0;
+      
+      
+         }
+
+                /* Responsive Design */
+
+        @media (max-width: 768px) {
+            .container-grid {
+                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .sectionA, .sectionD {
+                padding-bottom: 20px;
+            }
+
+            .sectionG .logo {
+                width: 20px;
+                height: 20px;
+                border-radius: 20px;
+                font-size: 12px;
+                margin-right: 10px;
+            }
+
+          }
+
+           @media (max-width: 600px) {
+            
+            .sectionG {
+              display: flex;
+              flex-direction: column;
+            }
+
+            .topG, .midG, .bottomG {
+              display: flex;
+              flex-direction: column;
+              padding: 20px 10px;
+            }
+
+            .imgG {
+              padding: 20px;
+            }
+
+            .topH {
+              display: flex;
+              flex-direction: column;
+            }
+
+           }
