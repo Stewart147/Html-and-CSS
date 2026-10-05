@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/8a10e0f309.js" crossorigin="anonymous"></script>
+
+    <style>
+
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+         body {
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+        }
+
+         /* Header Styles */
+
+        header {
+            display: flex;
+            width: 100%;
+            height: 80px;
+            background-color: #4a4a4a;
+        }
+
+         .logo {
+            width: 35%;
+            background-color: #2c5aa0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+         nav {
+            width: 50%;
+            background-color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #e6e6e6;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 12px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #fff;
+            border-bottom: 2px solid #e6e6e6;
+        }
+
+         .social {
+            width: 15%;
+            background-color: #4a4a4a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            padding: 0 20px;
+        }
+
+         .social i {
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+
+        .social i:hover {
+            opacity: 0.7;
+        }
+
+        /* main styles */
+
+        section {
+            margin: 30px;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        span {
+            font-size: 40px;
+        }
+
+        .head {
+            font-size: 26px;
+        }
+
+        .head1, .head2 {
+            font-size: 100px;
+            word-spacing: 240px;
+        }
+
+        .head3 {
+           font-size: 28px; 
+           word-spacing: 20px;
+        }
+
+        .lower-section {
+            display: flex;
+            justify-content: center;
+        }
+
+        .para1 {
+            font-size: 12px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+
+        hr {
+            width: 6px;
+            height: 100px;
+            background-color: #666;
+            margin: 0 10px;
+        }
+
+        .para2 {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 0px 50px;
+            max-width: 200px;
+        }
+
+
+  /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .logo, nav, .social {
+                width: 100%;
+                height: 60px;
+            }
+
+              nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+            } 
+
+        }
+
+        @media screen and (max-width: 480px) {
+
+       
+        /*    section {
+                font-size: x-small;
+            } */
+
+            .logo, nav {
+                display: flex;
+                flex-direction: column;
+                
+            }
+
+            nav {
+                height: auto;
+                padding: 10px 0px;
+            }
+
+            nav ul {
+                display: flex;
+                flex-direction: column;
+            /*    background-color: yellow; */
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+             /*   height: auto; */
+            }
+
+            .logo {
+                justify-content: center; 
+                align-items: center; 
+                font-size: 20px;
+                height: 100px;
+
+            } 
+
+            .head {
+                font-size: 14px;
+            }
+
+            span {
+                font-size: 20px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .head1, .head2 {
+                font-size: 20px;
+            }
+
+            .head3 {
+                font-size: 14px;
+            }
+
+         } 
+
+    
+
+    </style>
+
+
+
+</head>
+<body>
+
+    <header>
+
+        <div class="logo">
+            <h1>LOGO</h1>
+            &nbsp; &nbsp;
+            <h3>SmartDesign</h3>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="skills.html">SKILLS</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <div class="social">
+            <i class="fa-brands fa-twitter fa-lg" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-facebook-f fa-lg" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-instagram fa-lg" style="color: #ffffff;"></i>
+        </div>
+
+    </header>
+
+    <section>
+        
+            <div class="head"><span>YOU</span> At some point you may come back to read this line or not.</div>
+            <h2 class="head1">WILL READ</h2>
+            <h2 class="head2">THIS FIRST.</h2>
+            <h4 class="head3">AND THEN YOU WILL READ THIS LINE NEXT.</h4>
+            <br>
+
+            <div class="lower-section">
+            <p class="para1">YOU WILL GO BACK TO READ THIS BODY COPY IF YOU WANT TO <br>
+             KNOW MORE. IT TAKES THE MOST EFFORT TO READ BECAUSE IT HAS <br>
+             A LOT OF TEXT IN A SMALL FONT IN A LIGHT WEIGHT WITH SPACING. <br>
+             MANY PEOPLE WILL SKIP PARAGRAPHS LIKE THIS UNLESS <br>
+             IF THEY AREN'T ENGAGED RIGHT AWAY. THIS IS WHY IT'S IMPORTANT <br>
+             TO DRAW ATTENTION TO YOUR MESSAGE USING VISUAL HIERACHY.
+            </p>
+
+           <hr>
+
+           <p class="para2">YOU'LL PROBABLY READ THIS BEFORE THE PARAGRAPH.</p>
+
+           </div>
+
+
+    </section>
+
+
+
+
+
+    
+</body>
+</html>
