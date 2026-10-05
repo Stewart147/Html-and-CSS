@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- use the devices actual screen size ie desktop,mobile whatever -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+
+    <style>
+
+       *{
+            /* removes browsers default margin and padding */
+            margin: 0;
+            padding: 0;
+            /* include all elements padding and border */
+            box-sizing: border-box; 
+        } 
+
+        .box1{
+            margin-top: 10px;
+            background-color: darkgray;
+            width: 100vw;
+        }
+
+        h1{
+            margin-left: 500px;
+        }
+
+        .box2{
+            /* display horizontal also easier for padding */
+            display: inline-block; 
+            background-color: lightgray;
+            width: 100vw;
+            height: 500px;
+            position: relative; 
+            padding-top: 30px; 
+
+        }
+
+        .boxA{
+             /* display horizontal also easier for padding */
+            display: inline-block; 
+            background-color: lightgray;
+            width: 600px;
+            height: 440px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.52);
+            position: relative; 
+            margin-left: 40px;
+            margin-right: 80px;
+            padding: 20px;
+            top: -84px;
+
+        }
+
+        .boxB{
+             /* display horizontal also easier for padding */
+            display: inline-block; 
+            background-color: lightgray;
+            width: 600px;
+            height: 440px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.52);
+            position: relative; 
+            padding: 20px;
+        }
+
+        .boxB1{
+            background-color: lightgray;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.52);
+            margin: 15px;
+            padding: 10px;
+        }
+
+         .boxB2{
+            background-color: lightgray;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.52);
+            margin: 15px;
+            padding: 10px;
+        }
+
+         .boxB3{
+            background-color: lightgray;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.52);
+            margin: 15px;
+            padding: 10px;
+        }
+
+        .box3{
+            background-color: wheat;
+            width: 100%;
+            height: 500px;
+             /* display horizontal also easier for padding */
+            display: inline-block;
+            position: relative;
+        }
+
+        .boxC1{
+             /* display horizontal also easier for padding */
+            display: inline-block;
+            margin: 50px;
+            position: relative;
+        }
+
+        .boxC2{
+             /* display horizontal also easier for padding */
+            display: inline-block;
+            height: 340px;
+            width: 600px;
+            background-color: whitesmoke;
+            position: relative;
+            top: -70px;
+            padding: 30px;
+            margin-left: 80px;
+        }
+
+        .fig1 img{
+           width: 100%;
+           height: 400px;
+           }
+
+        .box4{
+             /* display horizontal also easier for padding */
+            display: inline-block;
+            background-color: rgb(248, 244, 244);
+            width: 100%;
+            height: 240px;
+            position: relative;
+            padding-left: 50px;
+            padding-top: 50px;
+        }
+
+        .fig2 img{
+            width: 100%;
+            height: 100px;
+        }
+
+        .boxD1{
+             /* display horizontal also easier for padding */
+            display: inline-block;
+            background-color: rgb(248, 244, 244);
+            width: 400px;
+            height: 200px;
+        }
+
+        .d1{
+             /* display horizontal also easier for padding */
+            display: inline-block;
+        }
+
+        .d2{
+             /* display horizontal also easier for padding */
+             display: inline-block;
+             padding: 30px;
+             width: 120px;
+        }
+
+        .boxD2{
+             /* display horizontal also easier for padding */
+            display: inline-block;
+            background-color: rgb(248, 244, 244);
+            width: 400px;
+            height: 200px;
+        }
+
+        .d3{
+             /* display horizontal also easier for padding */
+            display: inline-block;
+        }
+
+        .d4{
+             /* display horizontal also easier for padding */
+             display: inline-block;
+             padding: 30px;
+             width: 120px;
+        }
+
+         .boxD3{
+             /* display horizontal also easier for padding */
+            display: inline-block;
+            background-color: rgb(248, 244, 244);
+            width: 400px;
+            height: 200px;
+        }
+
+        .d5{
+            /* display horizontal also easier for padding */ 
+            display: inline-block;
+        }
+
+        .d6{
+             /* display horizontal also easier for padding */
+             display: inline-block;
+             padding: 30px;
+             width: 120px;
+        }
+
+         .box5{
+             /* display horizontal also easier for padding */
+            display: inline-block;
+            background-color: wheat;
+            width: 100%;
+            height: 500px;
+            position: relative;
+        }
+
+        .boxE1{
+             /* display horizontal also easier for padding */
+            display: inline-block;
+            margin: 50px;
+            position: relative;
+        }
+
+        .boxE2{
+             /* display horizontal also easier for padding */
+            display: inline-block;
+            height: 340px ;
+            width: 600px;
+            background-color: whitesmoke;
+            position: relative;
+            top: -450px;
+            padding: 30px;
+            margin-left: 710px;
+        }
+
+        .box6{
+             /* display horizontal also easier for padding */
+            display: inline-block;
+            background-color: rgb(248, 244, 244);
+            /* 100% width */
+            width: 100vw;
+            /*  height: 240px; */
+            /* let content determine height */
+            height: auto;
+            position: relative;
+            top: -330px;
+            padding-top: 50px; 
+            padding-left: 50px;
+        }
+
+        .boxF1{
+             /* display horizontal also easier for padding */
+            display: inline-block;
+            background-color: rgb(248, 244, 244);
+            width: 400px;
+            height: 200px;
+        }
+
+        .f1{
+             /* display horizontal also easier for padding */
+            display: inline-block;
+        }
+
+         .f2{
+             /* display horizontal also easier for padding */
+             display: inline-block;
+             padding: 30px;
+             width: 120px;
+        }
+
+        .boxF2{
+             /* display horizontal also easier for padding */
+            display: inline-block;
+            background-color: rgb(248, 244, 244);
+            width: 400px;
+            height: 200px;
+        }
+
+        .f3{
+             /* display horizontal also easier for padding */
+            display: inline-block;
+        }
+
+        .f4{
+             /* display horizontal also easier for padding */
+             display: inline-block;
+             padding: 30px;
+             width: 120px;
+        }
+
+         .boxF3{
+             /* display horizontal also easier for padding */
+            display: inline-block;
+            background-color: rgb(248, 244, 244);
+            width: 400px;
+            height: 200px;
+        }
+
+        .f5{
+             /* display horizontal also easier for padding */
+            display: inline-block;
+        }
+
+        .f6{
+             /* display horizontal also easier for padding */
+             display: inline-block;
+             padding: 30px;
+             width: 120px;
+        }
+
+
+/* responsive styles at 1350px and less mobile devices */
+
+@media screen and (max-width: 1350px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        /* use 100% width of parent for mobile */
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Header */
+    .box1 {
+         /* use 100% width of parent for mobile */
+        width: 100%;
+        /* let content determine height */
+        height: auto;
+        padding: 15px 20px;
+        margin-top: 0;
+    }
+
+    h1 {
+        margin-left: 0;
+        text-align: center;
+        font-size: 28px;
+    }
+
+
+    /* ================================
+       SECTION 1
+       ================================ */
+
+    .box2 {
+         /* use 100% width of parent for mobile */
+        width: 100%;
+        /* let content determine height */
+        height: auto;
+        /* display vertically */
+        display: block;
+        padding: 20px;
+        position: relative;
+    }
+
+    .boxA {
+        /* display vertically */
+        display: block;
+         /* use 100% width of parent for mobile */
+        width: 100%;
+         /* let content determine height */
+        height: auto;
+        min-height: 0;
+        margin: 0 0 20px 0;
+        padding: 20px;
+        top: 0;
+        position: relative;
+    }
+
+    .boxB {
+        /* display vertically */
+        display: block;
+         /* use 100% width of parent for mobile */
+        width: 100%;
+         /* let content determine height */
+        height: auto;
+        min-height: 0;
+        padding: 15px;
+        position: relative;
+        top: 0;
+    }
+
+    .boxB1, .boxB2, .boxB3 {
+         /* use 100% width of parent for mobile */
+        width: 100%;
+         /* let content determine height */
+        height: auto;
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .boxA p, .boxB p {
+        /* adjust vertical spacing between text */
+        line-height: 1.5;
+        font-size: 16px;
+        /* stops text extending out of container */
+        overflow-wrap: break-word;
+    }
+
+
+    /* ================================
+       SECTION 2
+       ================================ */
+
+    .box3 {
+         /* use 100% width of parent for mobile */
+        width: 100%;
+         /* let content determine height */
+        height: auto;
+        /* display vertically */
+        display: block;
+        padding: 20px;
+        position: relative;
+        top: 0;
+    }
+
+    .boxC1 {
+        /* display vertically */
+        display: block;
+         /* use 100% width of parent for mobile */
+        width: 100%;
+        margin: 0 0 20px 0;
+        position: relative;
+    }
+
+    .fig1 img {
+        /* display vertically */
+        display: block;
+         /* use 100% width of parent for mobile */
+        width: 100%;
+        max-width: 100%;
+         /* let content determine height */
+        height: auto;
+        margin: 0;
+    }
+
+    .boxC2 {
+        /* display vertically */
+        display: block;
+         /* use 100% width of parent for mobile */
+        width: 100%;
+         /* let content determine height */
+        height: auto;
+        min-height: 0;
+        margin: 0;
+        padding: 20px;
+        position: relative;
+        top: 0;
+    }
+
+    .boxC2 p {
+         /* adjust vertical spacing between text */
+        line-height: 1.5;
+        font-size: 16px;
+        /* stops text from extending out of container */
+        overflow-wrap: break-word;
+    }
+
+
+    /* ================================
+       SECTION 3
+       ================================ */
+
+    .box4 {
+         /* use 100% width of parent for mobile */
+        width: 100%;
+         /* let content determine height */
+        height: auto;
+        /* display vertically */
+        display: block;
+        padding: 20px;
+        position: relative;
+        top: 0;
+    }
+
+    .boxD1, .boxD2, .boxD3 {
+        display: flex;
+        align-items: center;
+         /* use 100% width of parent for mobile */
+        width: 100%;
+         /* let content determine height */
+        height: auto;
+        min-height: 120px;
+        margin-bottom: 15px;
+    }
+
+    .d1, .d2, .d3, .d4, .d5, .d6 {
+        /* display vertically */
+        display: block;
+    }
+
+    .d2, .d4, .d6 {
+         /* use 100% width of parent for mobile */
+        width: auto;
+        flex: 1;
+        padding: 15px;
+    }
+
+    .fig2 img {
+        /* display vertically */
+        display: block;
+         /* use 100% width of parent for mobile */
+        width: 80px;
+         /* let content determine height */
+        height: auto;
+        padding: 0;
+    }
+
+
+    /* ================================
+       SECTION 4
+       ================================ */
+
+    .box5 {
+         /* use 100% width of parent for mobile */
+        width: 100%;
+         /* let content determine height */
+        height: auto;
+        /* display vertically */
+        display: block;
+        padding: 20px;
+        position: relative;
+        top: 0;
+    }
+
+    .boxE1 {
+        /* display vertically */
+        display: block;
+         /* use 100% width of parent for mobile */
+        width: 100%;
+        margin: 0 0 20px 0;
+        position: relative;
+        top: 0;
+    }
+
+    .boxE2 {
+        /* display vertically */
+        display: block;
+         /* use 100% width of parent for mobile */
+        width: 100%;
+         /* let content determine height */
+        height: auto;
+        min-height: 0;
+        margin: 0;
+        padding: 20px;
+        position: relative;
+        top: 0;
+    }
+
+    .boxE2 p {
+         /* adjust vertical spacing between text */
+        line-height: 1.5;
+        font-size: 16px;
+        /* stops text from extending out of container */
+        overflow-wrap: break-word;
+    }
+
+
+    /* ================================
+       SECTION 5
+       ================================ */
+
+    .box6 {
+         /* use 100% width of parent for mobile */
+        width: 100%;
+         /* let content determine height */
+        height: auto;
+        /* display vertically */
+        display: block;
+        padding: 20px;
+        position: relative;
+        top: 0;
+    }
+
+    .boxF1, .boxF2, .boxF3 {
+        display: flex;
+        align-items: center;
+         /* use 100% width of parent for mobile */
+        width: 100%;
+         /* let content determine height */
+        height: auto;
+        min-height: 120px;
+        margin-bottom: 15px;
+    }
+
+    .f1, .f2, .f3, .f4, .f5, .f6 {
+        /* display vertically */
+        display: block;
+    }
+
+    .f2, .f4,  .f6 {
+        width: auto;
+        flex: 1;
+        padding: 15px;
+    }
+
+    .f1 img, .f3 img,  .f5 img {
+        /* display vertically */
+        display: block;
+        width: 80px;
+         /* let content determine height */
+        height: auto;
+        padding: 0;
+    }
+
+
+    /* ================================
+       GENERAL MOBILE TEXT
+       ================================ */
+
+    h3 {
+        font-size: 19px;
+         /* adjust vertical spacing between text */
+        line-height: 1.3;
+        margin-bottom: 8px;
+    }
+
+    p {
+        font-size: 16px;
+         /* adjust vertical spacing between text */
+        line-height: 1.5;
+        margin: 0;
+        /* stops text from extending out of container */
+        overflow-wrap: break-word;
+        /* stops long words from extending out of container */
+        word-wrap: break-word;
+    }
+
+    br {
+         /* adjust vertical spacing between text */
+        line-height: 1;
+    }
+}
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box1">
+        <h1>LOGO</h1>
+    </div>
+
+    <div class="box2">
+        <div class="boxA">
+            <h3>This is left side paragraph</h3>
+            <br>
+             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, excepturi ipsum
+               quos laboriosam atque repellendus eius quis consequuntur quibusdam tempora?
+               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, excepturi ipsum
+               quos laboriosam atque repellendus eius quis consequuntur quibusdam tempora?
+               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, excepturi ipsum
+               quos laboriosam atque repellendus eius quis consequuntur quibusdam tempora?
+               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, excepturi ipsum
+               quos laboriosam atque repellendus eius quis consequuntur quibusdam tempora?
+            </p>
+            <br> 
+
+             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, excepturi ipsum
+               quos laboriosam atque repellendus eius quis consequuntur quibusdam tempora?
+               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, excepturi ipsum
+               quos laboriosam atque repellendus eius quis consequuntur quibusdam tempora?
+             </p>
+        </div>
+
+        <div class="boxB">
+            <div class="boxB1">
+                <h3>This is the first paragraph of our website</h3>
+                <br>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, excepturi ipsum
+                   quos laboriosam atque repellendus eius quis consequuntur. 
+                </p>
+                <br>
+            </div>
+
+            <div class="boxB2">
+                <h3>This is the second paragraph of our website</h3>
+                <br>
+                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, excepturi ipsum
+               quos laboriosam atque repellendus eius quis consequuntur. 
+                </p>
+                <br>
+            </div>
+
+            <div class="boxB3">
+                 <h3>This is the third paragraph of our website</h3>
+                 <br>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, excepturi ipsum
+               quos laboriosam atque repellendus eius quis consequuntur.
+                </p>
+            </div>
+
+        </div>    
+
+     </div>  <!-- end of box2 -->
+
+     <div class="box3">
+        <div class="boxC1">
+            <figure class="fig1">
+            <img src="images/code8.jpg" alt="coding on a seat"> 
+            </figure>
+        </div>
+
+        <div class="boxC2">
+            <h3>This is another paragraph</h3>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quibusdam provident
+                 eligendi vel quaeratat sint fugiat voluptatum tempora cum?
+            </p>
+            <br>
+
+             <h3>This is another paragraph</h3>
+             <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quibusdam provident
+                 eligendi vel quaeratat sint fugiat voluptatum tempora cum?
+            </p>
+            <br>
+
+             <h3>This is another paragraph</h3>
+             <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quibusdam provident
+                 eligendi vel quaeratat sint fugiat voluptatum tempora cum?
+            </p>
+            <br>
+        </div>
+
+     </div>  <!-- end of box3 -->
+
+     <div class="box4">
+        <div class="boxD1">
+            <div class="d1">
+             <figure class="fig2">
+              <img src="images/circle-code1.png" alt="coding on a seat"> 
+              </figure>  
+            </div>
+            <div class="d2">
+                <p>this is a paragraph about an image</p>
+            </div>
+        </div> <!-- end of boxD1 -->
+
+         <div class="boxD2">
+            <div class="d3">
+            <figure class="fig2">
+            <img src="images/circle-code2.png" alt="coding on a seat"> 
+            </figure> 
+            </div>
+            <div class="d4">
+                <p>this is a paragraph about an image</p>
+            </div>
+        </div> <!-- end of boxD2 -->
+
+
+        <div class="boxD3">
+            <div class="d5">
+            <figure class="fig2">
+            <img src="images/circle-code3.png" alt="coding on a seat">
+            </figure>  
+            </div>
+            <div class="d6">
+                <p>this is a paragraph about an image</p>
+            </div>
+        </div> <!-- end of boxD3 -->
+
+    </div>  <!-- end of box4 -->
+
+     <div class="box5">
+        <div class="boxE1">
+            <figure class="fig1">
+            <img src="images/code8.jpg" alt="coding on a seat"> 
+            </figure>
+        </div>
+
+        <div class="boxE2">
+            <h3>This is another paragraph</h3>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quibusdam provident
+                 eligendi vel quaeratat sint fugiat voluptatum tempora cum?
+            </p>
+            <br>
+
+             <h3>This is another paragraph</h3>
+             <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quibusdam provident
+                 eligendi vel quaeratat sint fugiat voluptatum tempora cum?
+            </p>
+            <br>
+
+             <h3>This is another paragraph</h3>
+             <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quibusdam provident
+                 eligendi vel quaeratat sint fugiat voluptatum tempora cum?
+            </p>
+            <br>
+        </div>
+
+     </div>  <!-- end of box5 -->
+
+
+ <div class="box6">
+        <div class="boxF1">
+            <div class="f1">
+            <figure class="fig2">
+             <img src="images/circle-code1.png" alt="coding on a seat"> 
+              </figure>  
+            </div>
+            <div class="f2">
+                <p>this is a paragraph about an image</p>
+            </div>
+        </div> <!-- end of boxF1 -->
+
+         <div class="boxF2">
+            <div class="f3">
+           <figure class="fig2">
+           <img src="images/circle-code2.png" alt="coding on a seat">  
+            </figure> 
+            </div>
+            <div class="f4">
+                <p>this is a paragraph about an image</p>
+            </div>
+        </div> <!-- end of boxF2 -->
+
+
+        <div class="boxF3">
+            <div class="f5">
+            <figure class="fig2">
+            <img src="images/circle-code3.png" alt="coding on a seat">  
+            </figure>  
+            </div>
+            <div class="f6">
+                <p>this is a paragraph about an image</p>
+            </div>
+        </div> <!-- end of boxF3 -->
+
+    </div>  <!-- end of box6 -->
+
+
+
+
+
+   
+     
+</body>
+</html>

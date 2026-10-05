@@ -1,0 +1,512 @@
+   /* * is the universal selector it selects every HTML Element */
+
+* {
+    /* removes browsers default margin and padding */
+    margin: 0;
+    padding: 0;
+     /* include all elements padding and border */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    /* prevents unwanted horizontal scrolling useful on mobile devices */
+    overflow-x: hidden;
+     /* adjust vertical spacing between text */
+    line-height: 1.5;
+}
+
+img {
+    /* display vertically */
+    display: block;
+    /* image cannot become wider than it's parent  won't overflow on small screen */
+    max-width: 100%;
+}
+
+figure {
+    margin: 0;
+}
+
+
+/* header styling */
+
+.box1 {
+    width: 100%;
+    /* good for responsiveness sets lower height */ 
+    min-height: 80px;
+    background-color: darkgray;
+    /* display horizontally */
+    display: flex;
+    /* center content */
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+}
+
+.box1 h1 {
+    margin: 0;
+}
+
+
+/* main section1 styling */
+
+.box2 {
+    width: 100%;
+    background-color: lightgray;
+    /* display horizontally */
+    display: flex;
+    /* space 40px */
+    gap: 40px;
+    padding: 50px 40px;
+    /* align items to the top */
+    align-items: flex-start;
+}
+
+
+/* Left Side / Aside styling */
+
+.boxA {
+    /* take up available space */
+    flex: 1;
+    background-color: lightgray;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.52);
+    padding: 25px;
+    /* This element is allowed to become narrower than its content useful for mobile */
+    min-width: 0;
+}
+
+
+/* Right Side / Aside styling */
+
+.boxB {
+    /* take up available space */
+    flex: 1;
+    background-color: lightgray;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.52);
+    padding: 20px;
+    /* This element is allowed to become narrower than its content useful for mobile */
+    min-width: 0;
+}
+
+
+/* Articles styling */
+
+.boxB1, .boxB2, .boxB3 {
+    background-color: lightgray;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.52);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.boxB3 {
+    /* remove bottom margin */
+    margin-bottom: 0;
+}
+
+
+/* Section 2 Image and Text styling */
+
+.box3 {
+    width: 100%;
+    background-color: wheat;
+     /* display horizontally */
+    display: flex;
+    /* center content vertically */
+    align-items: center;
+    gap: 60px;
+    padding: 60px 50px;
+}
+
+
+/* Image styling */
+
+.boxC1 {
+     /* take up available space */
+    flex: 1;
+    /* This element is allowed to become narrower than its content useful for mobile */
+    min-width: 0;
+}
+
+.boxC1 img {
+    width: 100%;
+    height: 400px;
+    /* fit content of full image into content box size */
+    object-fit: cover;
+}
+
+
+/* Text styling */
+
+.boxC2 {
+    /* take up available space */
+    flex: 1;
+    background-color: whitesmoke;
+    padding: 30px;
+     /* This element is allowed to become narrower than its content useful for mobile */
+    min-width: 0;
+}
+
+.boxC2 article {
+    margin-bottom: 25px;
+}
+
+.boxC2 article:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Section 3 Image Cards styling */
+
+.box4 {
+    width: 100%;
+    background-color: rgb(248, 244, 244);
+     /* display horizontally */
+    display: flex;
+    gap: 30px;
+    padding: 50px;
+    /* if not enough room on line wrap to next line */
+    flex-wrap: wrap;
+}
+
+
+/* Card styling */
+
+.boxD1, .boxD2, .boxD3 {
+    /* take up available space */
+    flex: 1;
+    /* fixed width cannot go smaller than 280px */
+    min-width: 280px;
+    background-color: rgb(248, 244, 244);
+     /* display horizontally */
+    display: flex;
+    /* center content vertically */
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Image styling */
+
+.d1, .d3, .d5 {
+    /* ignore lack of space keep at a set-size */
+    flex-shrink: 0;
+}
+
+.d1 img, .d3 img, .d5 img {
+    width: 100px;
+    height: 100px;
+    /* fit content of full image into content box size */
+    object-fit: cover;
+}
+
+
+/* Card Text styling */
+
+.d2, .d4, .d6 {
+    /* take up available space */
+    flex: 1;
+    padding: 20px;
+}
+
+
+/* Section 4 Image plus Text styling */
+
+.box5 {
+    width: 100%;
+    background-color: wheat;
+    /* display horizontally */
+    display: flex;
+    /* center content */
+    align-items: center;
+    gap: 60px;
+    padding: 60px 50px;
+}
+
+
+/* Image styling */
+
+.boxE1 {
+    /* take up available space */
+    flex: 1;
+     /* This element is allowed to become narrower than its content useful for mobile */
+    min-width: 0;
+}
+
+.boxE1 img {
+    width: 100%;
+    height: 400px;
+    /* fit content of full image into content box size */
+    object-fit: cover;
+}
+
+
+/* Text styling */
+
+.boxE2 {
+    /* take up available space */
+    flex: 1;
+    background-color: whitesmoke;
+    padding: 30px;
+     /* This element is allowed to become narrower than its content useful for mobile */
+    min-width: 0;
+}
+
+.boxE2 article {
+    margin-bottom: 25px;
+}
+
+.boxE2 article:last-child {
+    margin-bottom: 0;
+}
+
+
+/*  Section 5 Second Set Of Image Cards styling  */
+
+.box6 {
+    width: 100%;
+    background-color: rgb(248, 244, 244);
+     /* display horizontally */
+    display: flex;
+    gap: 30px;
+    padding: 50px;
+     /* if not enough room on line wrap to next line */
+    flex-wrap: wrap;
+}
+
+
+/* Cards styling */
+
+.boxF1, .boxF2, .boxF3 {
+    /* take up available space */
+    flex: 1;
+    min-width: 280px;
+    background-color: rgb(248, 244, 244);
+     /* display horizontally */
+    display: flex;
+    /* center content */
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Images */
+
+.f1, .f3, .f5 {
+     /* ignore lack of space keep at a set-size  */
+    flex-shrink: 0;
+}
+
+.f1 img, .f3 img, .f5 img {
+    width: 100px;
+    height: 100px;
+    /* fit content of full image into content box size */
+    object-fit: cover;
+}
+
+
+/* Text styling */
+
+.f2, .f4, .f6 {
+    /* take up available space */
+    flex: 1;
+    padding: 20px;
+}
+
+
+/* Headings And Paragraphs */
+
+h2, h3 {
+     /* adjust vertical spacing between text */
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+     /* adjust vertical spacing between text */
+    line-height: 1.6;
+}
+
+
+/* footer styling */
+
+footer {
+    background-color: darkgray;
+    /* center content */
+    text-align: center;
+    padding: 25px;
+    font-size: 15px;
+}
+
+
+/* Responsive devices TABLET 1000px and smaller */
+
+@media screen and (max-width: 1000px) {
+
+    .box2, .box3, .box5 {
+        gap: 30px;
+        padding: 40px 30px;
+    }
+
+    .box4, .box6 {
+        padding: 40px 30px;
+    }
+
+    .boxC1 img, .boxE1 img {
+        height: 300px;
+    }
+}
+
+
+/* Responsive devices MOBILE 700px and smaller */
+
+@media screen and (max-width: 700px) {
+
+    /* Header styling */
+
+    .box1 {
+        /* good for responsiveness sets lower height */ 
+        min-height: 70px;
+    }
+
+    .box1 h1 {
+        font-size: 28px;
+    }
+
+
+    /* Section 1 styling*/
+
+    .box2 {
+        /* display vertically */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .boxA, .boxB {
+        width: 100%;
+        /* prevents from growing/shrinking stays same size */
+        flex: none;
+        padding: 20px;
+    }
+
+    .boxB1, .boxB2, .boxB3 {
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+
+
+    /* Section 2 Styling */
+
+    .box3 {
+        /* display vertically */
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .boxC1, .boxC2 {
+        width: 100%;
+        /* prevents from growing/shrinking stays same size */
+        flex: none;
+    }
+
+    .boxC1 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .boxC2 {
+        padding: 20px;
+    }
+
+
+    /* Section 3 styling */
+
+    .box4 {
+        /* display vertically */
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .boxD1, .boxD2, .boxD3 {
+        width: 100%;
+         /* This element is allowed to become narrower than its content useful for mobile */
+        min-width: 0;
+        /* prevents from growing/shrinking stays same size */
+        flex: none;
+    }
+
+
+    /* Section 4 styling 4 */
+
+    .box5 {
+        /* display vertically */
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .boxE1, .boxE2 {
+        width: 100%;
+        /* prevents from growing/shrinking stays same size */
+        flex: none;
+    }
+
+    .boxE1 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .boxE2 {
+        padding: 20px;
+    }
+
+
+    /* Section 5 styling */
+
+    .box6 {
+        /* display vertically */
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .boxF1, .boxF2, .boxF3 {
+        width: 100%;
+         /* This element is allowed to become narrower than its content useful for mobile */
+        min-width: 0;
+        /* prevents from growing/shrinking stays same size */
+        flex: none;
+    }
+
+
+    /* Text styling */
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    p {
+        font-size: 16px;
+         /* adjust vertical spacing between text */
+        line-height: 1.5;
+        /* forces long words to wrap onto next line instead of overflowing out of container */
+        overflow-wrap: break-word;
+    }
+}
+
