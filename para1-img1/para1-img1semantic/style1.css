@@ -1,0 +1,1002 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+}
+
+
+/* Header */
+
+.box1 {
+    width: 100%;
+    min-height: 120px;
+    background-color: darkslategrey;
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+
+/* Logo and company name */
+
+.boxA {
+    /* width: 180px; */
+    width: 220px;
+    height: 100px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.img1 {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.sports {
+    color: white;
+    margin-left: 5px;
+}
+
+.sports h1 {
+    margin: 0;
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+
+/* Main Navigation  */
+
+.boxB {
+    flex: 1;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.nav-top {
+    width: 100%;
+    height: auto;
+}
+
+.nav-top ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 5px;
+}
+
+.nav-top li {
+    display: block;
+}
+
+.nav-top a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.nav-top a:hover {
+    color: yellow;
+}
+
+
+/* Introduction Section */
+
+.box2 {
+    width: 100%;
+    min-height: 200px;
+    background-color: whitesmoke;
+    padding: 25px 20px 35px;
+}
+
+
+/* Introduction heading */
+
+.boxC1 {
+    width: 100%;
+    text-align: center;
+}
+
+.boxC1 h1 {
+    margin: 0 0 15px;
+}
+
+.boxC1 h2 {
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+
+/* Pagination */
+
+.boxC2 {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    padding: 0 60px;
+}
+
+
+/* Page numbers */
+
+.pagination > a {
+    display: inline-block;
+    min-width: 40px;
+    padding: 8px 15px;
+    text-align: center;
+    color: black;
+    background-color: lightgray;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+
+/* Current page */
+
+.pagination a.active {
+    background-color: hsl(120, 100%, 70%);
+    font-weight: bold;
+}
+
+
+/* Hover */
+
+.pagination a:hover:not(.active) {
+    background-color: hsl(0, 0%, 77%);
+}
+
+
+/* Previous / next buttons */
+
+.back,
+.forward {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    z-index: 2;
+}
+
+.back {
+    left: 0;
+}
+
+.forward {
+    right: 0;
+}
+
+.pagination .back a, .pagination .forward a {
+    color: black;
+    background-color: whitesmoke;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 0 12px;
+    line-height: 1;
+    text-decoration: none;
+}
+
+
+/* Sports Equipment Section */
+
+.box3 {
+    width: 100%;
+    min-height: 400px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px 6%;
+}
+
+
+/* Sports image */
+
+.boxD1 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxD1 figure {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.boxD1 img {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Sports article */
+
+.boxD2 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    max-width: 560px;
+    min-height: 260px;
+    background-color: white;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+
+/* Read more */
+
+#ch {
+    display: none;
+}
+
+#ch:checked ~ .content {
+    display: block;
+}
+
+#ch:checked ~ label {
+    display: none;
+}
+
+.content {
+    display: none;
+}
+
+.card label {
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(72, 113, 97);
+    padding: 6px 15px;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.card label:hover {
+    background-color: darkslategrey;
+}
+
+
+/* Car Sponsor Section */
+
+.box4 {
+    width: 100%;
+    min-height: 300px;
+    background-color: whitesmoke;
+    padding: 30px 5%;
+}
+
+
+/* Car Sponsor Introduction */
+
+.boxE1 {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.6;
+}
+
+.boxE1 h2 {
+    margin: 0 0 10px;
+}
+
+.boxE1 p {
+    margin: 0;
+}
+
+
+/* Cars */
+
+.boxE2 {
+    width: 100%;
+    min-height: 140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: whitesmoke;
+
+    
+}
+
+
+/* Individual cars */
+
+.a1, .a2, .a3, .a4, .a5 {
+    flex: 1;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Individual backgrounds */
+
+.a1 {
+    background-color: yellow;
+}
+
+.a2 {
+    background-color: blue;
+}
+
+.a3 {
+    background-color: coral;
+}
+
+.a4 {
+    background-color: silver;
+}
+
+.a5 {
+    background-color: purple;
+}
+
+.car-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* Footer */
+
+.box5 {
+    width: 100%;
+    min-height: 520px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    padding: 30px 5%;
+}
+
+
+/* Footer columns */
+
+.boxF1,
+.boxF2,
+.boxF3 {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 450px;
+    background-color: lightgrey;
+    padding: 25px;
+}
+
+
+/* Contact Form */
+
+.boxF1 h2 {
+    margin-top: 0;
+}
+
+.boxF1 h3 {
+    margin-bottom: 20px;
+}
+
+.boxF1 form {
+    width: 100%;
+}
+
+.boxF1 form label {
+    display: block;
+    width: 100%;
+    margin: 15px 0 5px;
+    padding: 6px;
+    background-color: rgb(165, 157, 157);
+}
+
+.boxF1 form input, .boxF1 form textarea {
+    width: 100%;
+    padding: 10px;
+    font-family: inherit;
+}
+
+.boxF1 form textarea {
+    resize: vertical;
+}
+
+
+/* Submit button */
+
+.button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 25px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: white;
+    background-color: black;
+}
+
+
+/* Sitemap */
+
+.boxF2 {
+    min-height: 450px;
+}
+
+.boxF2 h2 {
+    margin-top: 0;
+}
+
+.boxF2 h3 {
+    margin-bottom: 20px;
+}
+
+.nav-links {
+    width: 100%;
+    height: auto;
+    background-color: lightgrey;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links ul {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    width: 100%;
+    margin: 0 0 8px;
+}
+
+.nav-links a {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: darkslategrey;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: black;
+    background-color: white;
+}
+
+
+/* Company Info */
+
+.boxF3 {
+    min-height: 450px;
+}
+
+
+/* Company logo */
+
+.b1 {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.b1 .img1 {
+    width: 80px;
+    height: 80px;
+}
+
+
+/* Telephone */
+
+.b2 {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.b2 .img2 {
+    width: 30px;
+    height: 30px;
+}
+
+.phone-no {
+    font-size: 16px;
+}
+
+
+/* Email */
+
+.b3 {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.b3 .img2 {
+    width: 30px;
+    height: 30px;
+}
+
+.email-address {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+
+/* Copyright */
+
+.box6 {
+    width: 100%;
+    min-height: 80px;
+    background-color: darkslategrey;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.G1 {
+    width: 100%;
+    text-align: center;
+}
+
+.G1 p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+
+/* responsive Tablets */
+
+@media screen and (max-width: 1100px) {
+
+    .box1 {
+        padding: 10px 15px;
+        min-height: 90px;
+    }
+
+    .boxA {
+        width: 150px;
+        height: 80px;
+    }
+
+    .img1 {
+        width: 65px;
+        height: 65px;
+    }
+
+    .sports h1 {
+        font-size: 20px;
+    }
+
+    .boxB {
+        margin-left: 15px;
+        height: 80px;
+    }
+
+    .nav-top ul {
+        gap: 2px;
+    }
+
+    .nav-top a {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+
+
+    /* Introduction */
+
+    .box2 {
+        padding: 20px 15px 30px;
+    }
+
+    .boxC1 h2 {
+        max-width: 700px;
+        font-size: 17px;
+    }
+
+
+    /* Pagination */
+
+    .pagination {
+        padding: 0;
+        gap: 8px;
+    }
+
+    .back, .forward {
+        position: static;
+        transform: none;
+    }
+
+    .pagination .back a, .pagination .forward a {
+        font-size: 32px;
+        padding: 0 10px;
+    }
+
+
+    /* Sports section */
+
+    .box3 {
+        gap: 25px;
+        padding: 30px 4%;
+    }
+
+    .boxD1, .boxD2 {
+        width: 50%;
+    }
+
+    .boxD1 img {
+        height: 280px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+
+    /* Car parts */
+
+    .box4 {
+        padding: 30px 3%;
+    }
+
+    .boxE1 {
+        max-width: 650px;
+    }
+
+    .boxE2 {
+        gap: 20px;
+    }
+
+    .a1, .a2, .a3, .a4, .a5 {
+        width: 160px;
+        height: 100px;
+    }
+
+
+    /* Footer */
+
+    .box5 {
+        min-height: 500px;
+        gap: 15px;
+        padding: 25px 15px;
+    }
+
+    .boxF1, .boxF2, .boxF3 {
+        min-height: 450px;
+        padding: 18px;
+    }
+
+    .phone-no, .email-address {
+        font-size: 13px;
+    }
+
+
+    /* Copyright */
+
+    .box6 {
+        min-height: 70px;
+        padding: 15px 10px;
+    }
+
+    .G1 p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+}
+
+
+/* responsiveness mobile phones */
+
+@media screen and (max-width: 600px) {
+
+    /* Header */
+
+    .box1 {
+        display: block;
+        padding: 10px;
+    }
+
+    .boxA {
+        width: 100%;
+        height: 80px;
+        justify-content: center;
+    }
+
+    .img1 {
+        width: 60px;
+        height: 60px;
+    }
+
+    .sports h1 {
+        font-size: 20px;
+    }
+
+
+    /* Navigation */
+
+    .boxB {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-top: 10px;
+        display: block;
+    }
+
+    .nav-top ul {
+        display: block;
+        width: 100%;
+    }
+
+    .nav-top li {
+        width: 100%;
+    }
+
+    .nav-top a {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+
+    /* Introduction */
+
+    .box2 {
+        width: 100%;
+        min-height: auto;
+        padding: 20px 10px 30px;
+    }
+
+    .boxC1 h1 {
+        font-size: 24px;
+    }
+
+    .boxC1 h2 {
+        font-size: 16px;
+        line-height: 1.4;
+        padding: 0 25px;
+    }
+
+    .boxC2 {
+        margin-top: 20px;
+    }
+
+
+    /* Pagination */
+
+    .pagination {
+        padding: 0;
+        gap: 6px;
+    }
+
+    .back, .forward {
+        position: static;
+        transform: none;
+    }
+
+    .pagination > a {
+        min-width: 35px;
+        padding: 7px 10px;
+    }
+
+    .pagination .back a, .pagination .forward a {
+        font-size: 26px;
+        padding: 0 8px;
+    }
+
+
+    /* Sports section */
+
+    .box3 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px 15px;
+    }
+
+    .boxD1, .boxD2 {
+        width: 100%;
+    }
+
+    .boxD1 figure {
+        width: 100%;
+        margin: 0;
+    }
+
+    .boxD1 img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        max-height: 280px;
+        object-fit: cover;
+    }
+
+    .boxD2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 500px;
+        min-height: 0;
+        padding: 20px;
+    }
+
+    .card h2 {
+        font-size: 22px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+
+    /* Car parts */
+
+    .box4 {
+        width: 100%;
+        padding: 25px 15px;
+    }
+
+    .boxE1 {
+        width: 100%;
+        padding: 0 10px;
+        margin-bottom: 25px;
+    }
+
+    .boxE1 h2 {
+        font-size: 22px;
+    }
+
+    .boxE1 p {
+        font-size: 16px;
+    }
+
+    .boxE2 {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .a1, .a2, .a3, .a4, .a5 {
+        width: 180px;
+        height: 100px;
+    }
+
+
+    /* Footer */
+
+    .box5 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px 15px;
+        min-height: auto;
+    }
+
+    .boxF1, .boxF2, .boxF3 {
+        width: 100%;
+        min-width: 0;
+        min-height: auto;
+        padding: 20px;
+    }
+
+
+    /* Contact form */
+
+    .boxF1 input, .boxF1 textarea {
+        width: 100%;
+    }
+
+
+    /* Sitemap */
+
+    .nav-links {
+        width: 100%;
+    }
+
+    .nav-links ul {
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+
+    /* Company information */
+
+    .b1, .b2, .b3 {
+        width: 100%;
+    }
+
+    .phone-no, .email-address {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+
+
+    /* Copyright */
+
+    .box6 {
+        min-height: 70px;
+        padding: 15px 10px;
+    }
+
+    .G1 p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+}
+

@@ -1,0 +1,73 @@
+
+<html>
+
+<head>
+
+    <style>
+
+        .pagination{
+            text-align: center;
+        }
+
+        .pagination a{
+            color: black;
+            background-color: lightgray;
+            border-radius: 30px;
+            text-decoration: none;  /* removes underlining */
+            padding: 8px 15px;
+            display: inline-block;  /* allows us to adjust width and height of elements */
+        }
+
+        .pagination a.active{
+            background-color: hsl(120, 100%, 70%); 
+            font-weight: bold;
+            border-radius: 30px;
+        }
+
+        .pagination a:hover:not(.active){
+            background-color: hsl(0, 0%, 77%);
+            border-radius: 30px;
+        }
+
+      
+
+
+    </style>
+    
+</head>
+
+
+    <body>
+
+        <h1>This is page #2</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus dolorum ratione saepe
+           fugiat quasi illum sunt? Officiis magnam laborum autem!
+        </p>
+
+        <div class="pagination">
+            <a href="index.html"><</a>
+            <a href="index.html">1</a>
+            <a href="page2.html" class="active">2</a>
+            <a href="page3.html">3</a>
+            <a href="page3.html">></a>
+        </div>
+       
+
+
+
+
+
+
+    </body>
+
+
+
+
+
+
+
+
+
+
+</html>

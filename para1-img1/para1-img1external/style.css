@@ -1,0 +1,1188 @@
+/* box1 header */
+
+.box1 {
+    width: 100%;
+    min-height: 120px;
+    background-color: darkslategrey;
+    display: flex;
+    align-items: center;
+    /* width/height include content, padding and border */
+    box-sizing: border-box;
+    padding: 10px 30px;
+}
+
+/* Logo section */
+.boxA {
+    width: 180px;
+    height: 100px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* don't shrink this item, always 180px */
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.img1 {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    /* 100% image visible no cropping/detail loss */
+    object-fit: contain;
+}
+
+.sports {
+    color: white;
+    margin-left: 5px;
+}
+
+.sports h1 {
+    margin: 0;
+    font-size: 24px;
+    /* stops spliting into 2 lines */
+    white-space: nowrap;
+}
+
+/* Navigation section */
+.boxB {
+    /* grow and shrink evenly */
+    flex: 1;
+    height: 100px;
+    background-color: darkslategrey;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+/* Navigation */
+.nav-top {
+    width: 100%;
+    /* size to the content height */
+    height: auto;
+    padding: 0;
+}
+
+.nav-top ul {
+    /* remove bullets */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    /* move content to far right */
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-top li {
+    /* better clickability as can add padding using block for links */
+    display: block;
+}
+
+.nav-top a {
+    /* better clickability as can add padding using block for links */
+    display: block;
+    /* remove underline */
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    margin: 0;
+    font-size: 18px;
+    /* stops spliting to new line */
+    white-space: nowrap;
+}
+
+.nav-top a:hover {
+    color: yellow;
+}
+
+ 
+     
+/* box2 */
+
+.box2 {
+    width: 100%;
+    min-height: 200px;
+    background-color: whitesmoke;
+    padding: 25px 20px 35px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+/* boxC1 heading */
+
+.boxC1 {
+    width: 100%;
+    background-color: whitesmoke;
+    text-align: center;
+    /* width/height include content, padding and border */
+    box-sizing: border-box;
+}
+
+.boxC1 h1 {
+    /* top-0 left-0 right-0 bottom-15px */
+    margin: 0 0 15px;
+}
+
+.boxC1 h3 {
+    /* center horizontally */
+    margin: 0 auto;
+    max-width: 900px;
+    /* adjusts vertical spacing between text */
+    line-height: 1.5;
+}
+
+
+/* boxC2 */
+
+.boxC2 {
+    width: 100%;
+    background-color: whitesmoke;
+    margin-top: 25px;
+    /* width/height include content, padding and border */
+    box-sizing: border-box;
+}
+
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* sets relative parent position for arrows to be positioned using absolute */
+    position: relative;
+    /* reserves space on left and right for arrows */
+    padding: 0 60px;
+    /* width/height include content, padding and border */
+    box-sizing: border-box;
+}
+
+
+/* Page numbers */
+
+/* select any a element that is a child of .pagination */
+.pagination > a {
+    color: black;
+    background-color: lightgray;
+    border-radius: 30px;
+    /* removes underline*/
+    text-decoration: none;
+    padding: 8px 15px;
+    min-width: 40px;
+    text-align: center;
+    /* display horizontally but can add padding */
+    display: inline-block;
+    /* width/height include content, padding and border */
+    box-sizing: border-box;
+}
+
+
+/* Active page */
+
+.pagination a.active {
+    /* hsl- hue, saturation and light  color green*/
+    background-color: hsl(120, 100%, 70%);
+    font-weight: bold;
+}
+
+
+/* Hover */
+
+.pagination a:hover:not(.active) {
+    /* hsl- hue, saturation and light grey on hover */
+    background-color: hsl(0, 0%, 77%);
+}
+
+
+/* back/forward arrow buttons <> */
+
+
+.back, .forward {
+    /* positioned out of flow of relative position of .pagination */
+    position: absolute;
+    /* centres arrows with pagination numbers */
+    top: 50%;
+    transform: translateY(-50%);
+    /* no colour background box */
+    background-color: transparent; 
+    /* appear above any elements if they overlap */
+    z-index: 2;
+} 
+
+.back {
+    left: 0;
+}
+
+.forward {
+   right: 0;
+}
+
+.pagination .back a, .pagination .forward a {
+    color: black;
+    background-color: whitesmoke;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 0 12px;
+    /* removes underline */
+    text-decoration: none;
+    /* set line-height to equal font-size exactly */
+    line-height: 1;
+}
+
+
+.box3{
+    width: 100%;
+    min-height: 400px;
+    background-color: whitesmoke;
+    /* centre contents */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px 6%;
+    /* width/height include content, padding and border */
+    box-sizing: border-box;
+}
+
+
+
+.boxD1{
+    width: 50%;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    /* center content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxD1 figure{
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+}
+
+.boxD1 img{
+   width: 100%;
+   max-width: 600px;
+   height: 300px;
+   /* fit imagine keeping original aspect ratio */
+   object-fit: cover;
+   padding: 0;
+   /* removes any unwanted gaps with image as they are inline by default */
+   display: block; 
+}
+
+
+
+/* text section */
+
+
+.boxD2{
+    width: 50%;
+    background-color: whitesmoke;
+    box-sizing: border-box;
+    /* centre content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+ width: 100%;
+ max-width: 560px;
+ min-height: 260px;
+ background-color: white;
+ padding: 25px;
+  /* width/height include content, padding and border */
+ box-sizing: border-box;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.card h3 {
+    margin-bottom: 15px
+}
+
+/* Read More section */
+
+/* hides checkbox as used as a hack only use for fault finding */
+#ch{
+    display: none;
+}
+
+/* approx sign is a sibling selector */
+#ch:checked ~ .content{
+    display: block;
+}
+
+#ch:checked ~ label{
+    display: none;
+}
+
+/* content hidden to begin with */
+.content{
+    display: none;
+}
+
+.card label{
+    display: inline-block; 
+    /* changes mouse cursor to a hand when hovered over */
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(72, 113, 97);
+    padding: 6px 15px;
+     /* rounds the corners larger number bigger curve */
+    border-radius: 3px;
+    margin-top: 10px; 
+}
+
+.card label:hover {
+    background-color: darkslategrey;
+}
+
+/* box4 car parts */
+
+.box4{
+    width: 100%;
+    /* adjusts height to content */
+    height: auto;
+    min-height: 300px;
+    background-color: whitesmoke;
+    /* 5% for horizontal responsive spacing */
+    padding: 30px 5%;
+     /* width/height include content, padding and border */
+    box-sizing: border-box;
+}
+
+/* car parts heading */
+
+.boxE1{
+     width: 100%;
+     max-width: 700px;
+     min-height: auto;
+     background-color: whitesmoke;
+     margin: 0 auto 30px;
+     padding: 0 20px;
+      /* width/height include content, padding and border */
+     box-sizing: border-box;
+     text-align: center;
+     font-family: 'Courier New', Courier, monospace;
+     /* adjusts spacing between text lines vertically */
+     line-height: 1.6;
+}
+
+.boxE1 h2 {
+    /* top-0, left/right-0, bottom-10px */
+    margin: 0 0 10px;
+}
+
+.boxE1 p {
+    margin: 0;
+}
+
+/* car parts container */
+
+.boxE2{
+     width: 100%; 
+     min-height: 140px;
+     background-color: whitesmoke;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between; 
+     align-items: center; 
+     flex-wrap: wrap;
+     gap: 20px;
+      /* width/height include content, padding and border */
+     box-sizing: border-box;
+}
+
+/* car part boxes */
+
+.a1, .a2, .a3, .a4, .a5 {
+     /* grow and shrink evenly space content */
+    flex: 1;
+    height: 100px;
+    /* center content */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 0;
+    padding: 0;
+     /* width/height include content, padding and border */
+    box-sizing: border-box;
+}
+
+/* individual colours */
+
+.a1{
+    background-color: yellow;
+}
+    
+
+.a2{
+    background-color: blue;
+}
+
+.a3{
+    background-color: coral; 
+}
+
+.a4{
+    background-color: silver;
+}
+
+.a5{
+    background-color: purple;
+}
+
+.car-img {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    /* scales image down/up to fit container no distortion best for logos etc */
+    object-fit: contain;
+    /* easier use of padding for responsiveness as images are inline by default */
+    display: block;
+}
+
+/* box5 contact section */
+
+.box5{
+    width: 100%; 
+    min-height: 520px;
+    background-color: whitesmoke;
+    /* display horizontally  allowing content to stretch */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch; 
+    gap: 30px;
+    padding: 30px 5%;
+     /* width/height include content, padding and border */
+    box-sizing: border-box;
+}
+
+/* contact form */
+
+.boxF1, .boxF2, .boxF3 {
+   /* flex shrink, grow evenly but not affecting flex-basis */
+   flex: 1 1 0;
+   min-width: 0;
+   /*width: 35%; */
+   min-height: 450px;
+   background-color: lightgrey;
+   padding: 25px;
+   margin: 0;
+   /* width/height include content, padding and border */
+   box-sizing: border-box;
+   position: static;
+}
+
+.boxF1 h2 {
+    margin-top: 0;
+}
+
+.boxF1 h4 {
+    margin-bottom: 20px;
+}
+
+/* Form */
+
+.boxF1 form {
+    width: 100%;
+}
+
+.boxF1 form label {
+    display: block;
+    width: 100%;
+    margin: 15px 0 5px;
+    padding: 6px;
+    background-color: rgb(165, 157, 157);
+     /* width/height include content, padding and border */
+    box-sizing: border-box;
+}
+.boxF1 form input, .boxF1 form textarea {
+    width: 100%; 
+    padding: 10px;
+    box-sizing: border-box;
+    /* inherit font-family values from parent */
+    font-family: inherit;
+}
+
+.boxF1 form textarea {
+    /* stops breaking page structure vertically, user can only adjust verticaally
+     default is both vertical and horizontal resize */
+    resize: vertical;
+}
+
+/* Submit button */
+
+.button {
+    display: block;
+    /* top/bottom 20px auto 0 centers button */
+    margin: 20px auto 0;
+    padding: 10px 25px;
+    /* add curve to edges */
+    border-radius: 8px;
+    border: 1px solid #555;
+    /* changes mouse icon to hand when hovered */
+    cursor: pointer;
+}
+
+.button:hover {
+    color: white;
+    background-color: black;
+}
+
+/* Site Map */
+
+.boxF2{
+     /* flex shrink, grow evenly but not affecting flex-basis */
+     flex: 1 1 0;
+     min-width: 0;
+     min-height: 450px;
+     background-color: lightgrey;
+     padding: 25px;
+     margin: 0;
+    /* width/height include content, padding and border */
+     box-sizing: border-box;
+}
+
+.boxF2 h2 {
+    margin-top: 0;
+}
+
+.boxF2 h3 {
+    margin-bottom: 20px;
+}
+
+/* Sitemap navigation */
+
+.nav-links {
+    display: block;
+    width:100%; 
+    /* fits content vertically adjusts without causing overflow */
+    height: auto;
+    background-color: lightgrey;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links ul {
+    width: 100%;
+    list-style-type: none; /*disc */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    width: 100%;
+    /* top-0, left/right-0, bottom-8px */
+    margin: 0 0 8px;
+}
+
+.nav-links a {
+    display: block;
+    width: 100%; 
+    padding: 10px 15px;
+    background-color: darkslategrey;
+    color: white;
+    /* remove default underline */
+    text-decoration: none;
+    /* width/height include content, padding and border */
+    box-sizing: border-box;
+}
+
+.nav-links a:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+/* Hide the old bullet images */
+.img-site1, .img-site2, .img-site3, .img-site4, .img-site5 {
+      display: none;
+}
+
+/* Company Details */
+
+.boxF3{
+     /* flex shrink, grow evenly but not affecting flex-basis */
+     flex: 1 1 0;
+     min-width: 0;
+     min-height: 450px;
+     background-color: lightgrey;
+     padding: 25px;
+     margin: 0;
+    /* width/height include content, padding and border */
+     box-sizing: border-box;
+}
+
+/* Company logo */
+
+.b1 {
+    width: 100%; 
+    height: 100px;
+    background-color: lightgrey;
+    /* center vertically */
+    display: flex;
+    align-items: center;
+}
+
+.b1 .img1 {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+}
+
+/* phone */
+    
+.b2 {
+    width: 100%;
+    min-height: 100px;
+    background-color: lightgrey;
+    /* align center vertically */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.b2 .img2 {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+}
+
+.phone-no {
+
+    width: auto;
+    height: auto;
+    background-color: lightgrey;
+    font-size: 16px;
+}
+
+/* Email */
+
+.b3 {
+    width: 100%;
+    min-height: 100px;
+    background-color: lightgrey;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.b3 .img2 {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+}
+
+.email-address {
+    width: auto;
+    height: auto;
+    background-color: lightgrey;
+    position: static;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+
+.box6 {
+    width: 100%;
+    min-height: 80px;
+    background-color: darkslategrey;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* width/height include content, padding and border */
+    box-sizing: border-box;
+}
+
+/* Copyright */
+
+.G1 {
+    width: 100%;
+    text-align: center;
+}
+
+.G1 h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+
+
+/* media styles for viewing mobile devices tablets */
+
+    @media screen and (max-width: 1100px) {
+
+         
+            .box1 {
+                padding: 10px 15px;
+                min-height: 90px;
+            }
+
+    
+            .boxA {
+                width: 150px;
+                height: 80px;
+            }
+
+            .img1 {
+                width: 65px;
+                height: 65px;
+            }
+
+            .sports h1 {
+                font-size: 20px;
+            }
+
+
+           .boxB {
+               margin-left: 15px;
+               height: 80px;
+           }
+
+       
+            .nav-top{
+                width: 100%;
+                margin-top: 0;
+                background-color: transparent;
+            }
+
+            .nav-top ul {
+                gap: 2px;
+                justify-content: flex-end;
+            }
+
+            .nav-top li {
+                 display: block;
+                 width: auto;
+                 margin-left: 0;
+            }
+
+        
+            .nav-top a {
+                 padding: 10px 12px;
+                 font-size: 15px
+             }
+
+       
+
+          .box2 {
+              width: 100%;
+              padding: 20px 15px 30px;
+    }
+
+    .boxC1 h3 {
+        max-width: 700px;
+        font-size: 17px;
+    }
+
+
+    .pagination {
+        padding: 0;
+        gap: 8px;
+    }
+
+    /* make arrows sit on same row as numbers */
+    .back, .forward {
+        /* puts arrows back into natural flow as moved by absolute positioning */
+        position: static;
+        /* cancels translateY(-50%)  from desktop */
+        transform: none;
+        /* set back to original position before absolute positioning was used */
+        top: auto;
+        left: auto;
+        right: auto;
+    }
+
+    .pagination .back a, .pagination .forward a {
+        font-size: 32px;
+        padding: 0 10px;
+    }
+
+          .box3{
+              gap: 25px;
+              padding: 30px 4%;
+       }
+
+            .boxD1, .boxD2 {
+                   width: 50%;
+            }
+
+          .boxD1 img {
+            height: 280px;
+          }
+
+          .card {
+            padding: 20px;
+          }
+
+        
+        .box4{
+               padding: 30px 3%;
+        }
+
+         .boxE1{
+                max-width: 650px;
+        }
+
+        .boxE2{
+               gap: 20px;
+         }
+
+        .a1, .a2, .a3, .a4, .a5 {
+                        width: 160px;
+                        height: 100px;
+        } 
+
+        
+        .box5{
+               width: 100%;
+               min-height: 500px;
+               display: flex;
+               flex-direction: row;
+               align-items: stretch;
+               gap: 15px;
+               padding: 25px 15px;
+               margin: 0;
+               background-color: whitesmoke;
+               /* width/height include content, padding and border */
+               box-sizing: border-box;
+        } 
+
+           
+
+
+        .boxF1 .boxF2, .boxF3 {
+              flex: 1 1 0;
+              width: auto;
+              min-width: 0;
+              min-height: 450px;
+              padding: 18px;
+              /* width/height include content, padding and border */
+              box-sizing: border-box;
+            }
+
+
+      
+
+            .phone-no, .email-address {
+                font-size: 13px;
+            }
+
+            .box6 {
+                width: 100%;
+                height: auto;
+                min-height: 70px;
+                margin: 0;
+                padding: 15px 10px;
+                position: static;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: darkslategrey;
+                color: white;
+                /* width/height include content, padding and border */
+                box-sizing: border-box;
+            }
+
+            .G1 h4 {
+                margin: 0;
+                font-size: 12px;
+                line-height: 1.4;
+            } 
+
+         } 
+
+        /* end of media query */
+
+        /* media query for mobile phones */
+
+  @media screen and (max-width: 600px) {
+
+  
+    .box1 { 
+        width: 100%; 
+        display: block; 
+        padding: 10px;
+    }
+
+ 
+
+    .boxA { 
+        width: 100%; 
+        height: 80px; 
+        justify-content: center;
+     }
+
+    .img1 {
+        width: 60px;
+        height: 60px;
+    }
+
+    .sports h1 {
+        font-size: 20px;
+    }
+
+ 
+    .boxB { 
+        width: 100%; 
+        height: auto; 
+        margin-left: 0; 
+        margin-top: 10px;
+        display: block;
+    }
+
+    .nav-top { 
+        width: 100%;
+     }
+
+  
+
+    .nav-top ul { 
+        display: block; 
+        width: 100%;
+     }
+
+
+
+    .nav-top li {
+        width: 100%;
+    }
+
+    .nav-top a {
+        width: 100%;
+        /* width/height include content, padding and border */
+        box-sizing: border-box;
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    
+      .box2 {
+        width: 100%;
+        min-height: 230px;
+        padding: 20px 10px 30px;
+    }
+
+    .boxC1 h1 {
+        font-size: 24px;
+    }
+
+    .boxC1 h3 {
+        font-size: 16px;
+        line-height: 1.4;
+        padding: 0 25px;
+    }
+
+    .boxC2 {
+        margin-top: 20px;
+    }
+
+    .pagination {
+        padding: 0;
+        gap: 6px;
+    }
+
+    /* keep arrows in the same row as the numbers */
+
+     .back, .forward {
+        position: static;
+        transform: none;
+        /* auto fills position as browser resizes responsive */
+        top: auto;
+        left: auto;
+        right: auto;
+     }
+
+
+    .pagination > a {
+        min-width: 35px;
+        padding: 7px 10px;
+    }
+
+  
+
+    .pagination .back a, .pagination .forward a {
+        font-size: 26px;
+        padding: 0 8px;
+    }
+
+
+.box2 {
+    width: 100%;
+    /* display vertically */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 15px;
+    /* helps responsiveness and prevents overflow as content is filled verically */
+    min-height: auto;
+}
+
+.boxD1, .boxD2 {
+    width: 100%;
+    position: static;
+}
+
+.boxD1 figure {
+    width: 100%;
+    margin: 0;
+}
+.boxD1 img {
+    width: 100%;
+    max-width: 500px;
+     /* adjust content vertically with no overflow */
+    height: auto;
+    max-height: 280px;
+    object-fit: cover;
+    padding: 0;
+}
+
+.boxD2 {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 100%;
+    max-width: 500px;
+    /* adjust content vertically with no overflow */
+    height: auto;
+    min-height: 0;
+    padding: 20px;
+}
+
+.card h2 {
+    font-size: 22px;
+}
+
+.card h3 {
+    font-size: 18px;
+}
+
+.card p {
+    font-size: 16px;
+    /* adjust line height between text lines vertically */
+    line-height: 1.5;
+}
+
+
+.box4 {
+    width: 100%;
+    padding: 25px 15px;;
+}
+
+.boxE1{
+     width: 100%;
+     padding: 0 10px;
+     margin-bottom: 25px;
+}
+
+.boxE1 h2 {
+    font-size: 22px;
+}
+
+.boxE1 p {
+    font-size: 16px;
+}
+
+.boxE2 {
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.a1, .a2, .a3, .a4, .a5 {
+             width: 180px;
+             height: 100px;
+}
+
+
+
+.box5 {
+    width: 100%;
+    /* display vertically */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 15px;
+    min-height: auto;
+    /* width/height include content, padding and border */
+    box-sizing: border-box;
+}
+
+.boxF1, .boxF2, .boxF3 {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+    padding: 20px;
+    /* width/height include content, padding and border */
+    box-sizing: border-box;
+} 
+
+  
+
+/* Contact form */
+
+ .boxF1 input, .boxF1 textarea {
+    width: 100%;
+} 
+
+
+/* Sitemap */
+
+ .nav-links {
+    width: 100%;
+}
+
+.nav-links ul {
+    width: 100%;
+}
+
+.nav-links li {
+    width: 100%;
+} 
+
+
+/* Company details */
+
+.b1, .b2, .b3 {
+    width: 100%;
+}
+
+.phone-no, .email-address {
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+
+
+
+.box6 {
+    min-height: 70px;
+    padding: 15px 10px;
+}
+
+.G1 h4 {
+    font-size: 12px;
+    line-height: 1.4;
+} 
+
+}
