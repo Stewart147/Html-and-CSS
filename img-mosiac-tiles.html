@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch5A Grid</title>
+
+    <head>
+        <title>Challenge 5A Grid</title>
+        <style>
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 20px;
+            }
+
+            .container-grid{
+                display: grid;                                          /* displays grid  */
+                grid-template-columns: auto auto auto auto auto;        /* auto autosizes the 3 columns i.e responsive */
+                grid-gap: 10px;                                         /* creates space between sections */
+                grid-template-rows: 180px 60px 60px 140px 140px;               
+                                                                          
+
+            }
+
+            .section1{
+                grid-column: 1 / 2;
+                grid-row: 1 / 4;
+                background-color: blue;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+           .section2{
+                grid-column: 2 / 3;
+                grid-row: 1 / 4;
+                background-color: yellow;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .section3{
+                grid-column: 3 / 4;
+                grid-row: 1 / 5;
+                background-color: cyan;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .section4{
+                grid-column: 4 / 6;
+                grid-row: 1 / 2;
+                background-color: green;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .section5{
+                grid-column: 1 / 2;
+                grid-row: 4 / 6;
+                background-color: purple;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+             .section6{
+                grid-column: 2 / 3;
+                grid-row: 4 / 5;
+                background-color: red;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+             .section7{
+                grid-column: 4 / 5;
+                grid-row: 2 / 5;
+                background-color: black;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+             .section8{
+                grid-column: 5 / 6;
+                grid-row: 2 / 6;
+                background-color: brown;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+             .section9{
+                grid-column: 2 / 3;
+                grid-row: 5 / 6;
+                background-color: orange;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+              .section10{
+                grid-column: 3 / 5;
+                grid-row: 5 / 6;
+                background-color: palevioletred;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            /* responsiveness for mobile devices */
+
+            @media screen and (max-width:768px) {
+
+            .container-grid{
+                display: grid;                                         
+                grid-template-columns: auto auto auto ;            
+                grid-gap: 10px;                                         
+                grid-template-rows: 180px 60px 60px 140px 140px;             
+                                                                         
+
+            }
+
+             .section1{
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+                background-color: blue;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+           .section2{
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+                background-color: yellow;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .section3{
+                grid-column: 3 / 4;
+                grid-row: 1 / 3;
+                background-color: cyan;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .section4{
+                grid-column: 1 / 3;
+                grid-row: 2 / 3;
+                background-color: green;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .section5{
+                grid-column: 1 / 2;
+                grid-row: 3 / 5;
+                background-color: purple;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+             .section6{
+                grid-column: 2 / 3;
+                grid-row: 3 / 4;
+                background-color: red;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+             .section7{
+                grid-column: 3 / 4;
+                grid-row: 3 / 5;
+                background-color: black;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+             .section8{
+                grid-column: 1 / 4;
+                grid-row: 5 / 6;
+                background-color: brown;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+             .section9{
+                grid-column: 1 / 4;
+                grid-row: 6 / 7;
+                background-color: orange;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+                height: 140px;
+            }
+
+              .section10{
+                grid-column: 1 / 4;
+                grid-row: 7 / 8;
+                background-color: palevioletred;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+                height: 140px;
+            }
+
+        }
+
+              /* responsiveness for mobile phones */
+
+            @media screen and (max-width:600px) {
+
+            /*     .container-grid>div {
+                    display: flex;
+                    flex-direction: column;
+                                                                          
+
+            } */
+
+            .container-grid{
+                display: grid;                                         
+                grid-template-columns: auto ;            
+                grid-gap: 10px;                                         
+                grid-template-rows: 200px 200px 440px 140px 280px 140px 260px 400px 140px 140px;             
+                                                                        
+            }
+
+
+            .section1{
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+                background-color: blue;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+           .section2{
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+                background-color: yellow;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .section3{
+                grid-column: 1 / 2;
+                grid-row: 3 / 4;
+                background-color: cyan;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .section4{
+                grid-column: 1 / 2;
+                grid-row: 4 / 5;
+                background-color: green;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .section5{
+                grid-column: 1 / 2;
+                grid-row: 5 / 6;
+                background-color: purple;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+             .section6{
+                grid-column: 1 / 2;
+                grid-row: 6 / 7;
+                background-color: red;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+             .section7{
+                grid-column: 1 / 2;
+                grid-row: 7 / 8;
+                background-color: black;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+             .section8{
+                grid-column: 1 / 2;
+                grid-row: 8 / 9;
+                background-color: brown;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+            }
+
+             .section9{
+                grid-column: 1 / 2;
+                grid-row: 9 / 10;
+                background-color: orange;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+                height: 140px;
+            }
+
+              .section10{
+                grid-column: 1 / 2;
+                grid-row: 10 / 11;
+                background-color: palevioletred;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+                height: 140px;
+            }
+
+
+                
+            }
+
+
+
+  
+        </style>  
+    </head>
+
+    <body>
+
+        <div class="container-grid">
+            <div class="section1">Section1</div>
+            <div class="section2">Section2</div>
+            <div class="section3">Section3</div>
+            <div class="section4">Section4</div>
+            <div class="section5">Section5</div>
+            <div class="section6">Section6</div>
+            <div class="section7">Section7</div>
+            <div class="section8">Section8</div>
+            <div class="section9">Section9</div>
+            <div class="section10">Section10</div>
+
+        </div>
+ 
+    </body>
+
+
+</html>
