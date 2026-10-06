@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            margin-bottom: 40px;
+        }
+
+        /* grid section styles */
+
+        .container-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr 3fr;
+             grid-gap: 10px; 
+            grid-template-rows: 100px 100px 200px 200px 200px 200px 200px;
+        }
+
+        .sectionA {
+            grid-column: 1 / 4;
+            grid-row: 1 / 2;  
+        }
+
+        .sectionB {
+            grid-column: 1 / 4;
+            grid-row: 2 / 3;
+            background-color: #4a4a4a;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            justify-content:space-evenly;
+        }
+
+        .sectionC {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            color: black;
+            box-shadow: 3px rgba(1, 1, 1, 1.5);
+            text-align: left;
+            font-size: 18px;
+            border-radius: 10px;
+        }
+
+        .sectionD {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+            background-color: wheat;
+            color: black;
+            box-shadow: 3px rgba(0, 0, 0, 1.5);
+            text-align: left;
+            font-size: 18px;
+            border-radius: 10px;
+        }
+
+        .sectionE {
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+            color: black;
+            box-shadow: 3px rgba(0, 0, 0, 1.5);
+            text-align: left;
+            font-size: 18px;
+            border-radius: 10px;
+        }
+
+        .sectionF {
+            grid-column: 2 / 3;
+            grid-row: 4 / 5;
+            background-color: wheat;
+            color: black;
+            box-shadow: 3px rgba(0, 0, 0, 1.5);
+            text-align: left;
+            font-size: 18px;
+            border-radius: 10px;
+        }
+
+        .sectionG {
+            grid-column: 1 / 2;
+            grid-row: 5 / 6;
+            color: black;
+            box-shadow: 3px rgba(0, 0, 0, 1.5);
+            text-align: left;
+            font-size: 18px;
+            border-radius: 10px;
+        }
+
+        .sectionH {
+            grid-column: 2 / 3;
+            grid-row: 5 / 6;
+            background-color: wheat;
+            color: black;
+            box-shadow: 3px rgba(0, 0, 0, 1.5);
+            font-size: 18px;
+            border-radius: 10px;
+        }
+
+         .sectionI {
+            grid-column: 1 / 2;
+            grid-row: 6 / 7;
+            color: black;
+            box-shadow: 3px rgba(0, 0, 0, 1.5);
+            font-size: 18px;
+            border-radius: 10px;
+        }
+
+         .sectionJ {
+            grid-column: 2 / 3;
+            grid-row: 6 / 7;
+            background-color: wheat;
+            color: black;
+            box-shadow: 3px rgba(0, 0, 0, 1.5);
+            font-size: 18px;
+            border-radius: 10px;
+        }
+
+         .sectionK {
+            grid-column: 1 / 2;
+            grid-row: 7 / 8;
+            color: black;
+            box-shadow: 3px rgba(0, 0, 0, 1.5);
+            font-size: 18px;
+            border-radius: 10px;
+        }
+
+         .sectionL {
+            grid-column: 2 / 3;
+            grid-row: 7 / 8;
+            background-color: wheat;
+            color: black;
+            box-shadow: 3px rgba(0, 0, 0, 1.5);
+            font-size: 18px;
+            border-radius: 10px;
+        }
+
+         .sectionM {
+            grid-column: 3 / 4;
+            grid-row: 3 / 8;
+            color: black;
+            box-shadow: 3px rgba(0, 0, 0, 1.5);
+            border-radius: 10px;
+        }
+
+        /* header styles */
+
+         header {
+            display: flex;
+            width: 100%;
+            height: 100px;
+            background-color: #4a4a4a;
+        }
+
+
+
+         .logo {
+            width: 15%;
+            background-color: #2c5aa0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+          nav {
+            width: 60%;
+            background-color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #e6e6e6;
+            text-decoration: none; 
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 12px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: lightgray;
+            border-bottom: 2px solid #e6e6e6;
+        }
+
+        .sub-nav {
+            width: 25%;
+        }
+
+        .sub-nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .sub-nav a {
+            color: #e6e6e6;
+         /*   text-decoration: none; */
+            font-size: 10px;
+            font-weight: 500;
+            padding: 6px 2px;
+            transition: all 0.3s ease;
+        }
+
+        .sub-nav a:hover {
+            color: #fff;
+        }
+
+         .img { 
+            width: 100%;
+            height: 100%; 
+            object-fit: cover;
+            border-radius: 10px;
+         }
+
+         .img:hover {
+            opacity: 0.7;
+         }
+
+         /* search section styles */
+
+         .search {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+         }
+
+         .search-input {
+            height: 30px;
+            width: 200px;
+            padding: 10px;
+         } 
+
+    
+
+         .min-price {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            height: 120px;
+            width: 100px;
+
+         }
+
+          .max-price {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            height: 120px;
+            width: 100px;
+
+         }
+
+          .beds {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            height: 120px;
+            width: 100px;
+            
+         }
+
+          .baths {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            height: 120px;
+            width: 100px;
+
+         }
+
+         button {
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            width: 120px;
+            height: 40px;
+            border-radius: 10px;
+            margin-top: 20px;
+         }
+
+         button:hover {
+            background-color: white;
+            border-color: white;
+         }
+
+         .lang {
+            color: white;
+            margin-top: 10px;
+            margin-right: 10px;
+            text-align: end;
+            font-size: 10px;
+         }
+
+         .advanced-search {
+            margin-top: 30px;
+            font-size: 16px;
+         }
+
+        .advanced-search a {
+            color: #e6e6e6;
+         }
+
+        .advanced-search a:hover {
+            color: #fff;
+         }
+
+
+         .content {
+            line-height: 0.2;
+            padding-left: 20px;
+            padding-top: 20px;
+         } 
+
+          footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+
+          /* Responsive Design */
+          
+
+           @media (max-width: 1068px) {
+
+
+            .container-grid {
+                display:flex;
+                flex-direction: column;
+            }   
+            
+           header {
+                display: flex; 
+                flex-direction: column;
+                height: auto; 
+                width: 100%;
+                justify-content: center; 
+                align-items: center; 
+                
+            }  
+
+            nav {
+                width: 100%;
+            }
+
+            nav a {
+                display: flex;
+            }
+
+            .sub-nav {
+               height: 100px;
+               width: 100%;
+            }
+
+            .sub-nav ul {
+                display: flex;
+                justify-content: center;
+            }
+
+            .sub-nav a {
+                padding: 0px 10px;
+            }
+
+            .lang {
+                display: flex;
+                justify-content: center;
+            }
+
+            .sectionB {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+        
+            }
+
+            .advanced-search {
+                margin-bottom: 20px;
+            }
+
+            iframe {
+                max-width: 568px;
+                height: 600px;
+            }
+
+       
+      
+        }
+
+    
+
+    </style>
+
+
+</head>
+
+
+<body>
+
+    <div class="container-grid">
+
+    <div class="sectionA">
+        <header>
+        <div class="logo">LOGO</div>
+
+        <nav>
+            <ul>
+                <li><a href="search.html">SEARCH FOR HOMES</a></li>
+                <li><a href="agents.html">AGENTS AND OFFICES</a></li>
+                <li><a href="info.html">LOCAL INFORMATION</a></li>
+            </ul>
+        </nav>
+
+        <div class="sub-nav">
+
+        <div class="lang">
+            <label for="subject">LANGUAGE</label>
+            <select id="lang" name="lang" required>
+               <option value="">ENGLISH</option>
+               <option value="pol">POLISH</option>
+               <option value="chi">CHINESE</option>
+               <option value="ger">GERMAN</option>
+            </select>
+        </div>
+
+            <ul>
+                <li><a href="#">BUYING/SELLING YOUR HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">ACCOUNT</a></li>
+            </ul>
+        </div>
+
+        </header>
+
+    </div> <!-- end of section A -->
+
+
+    <div class="sectionB">
+
+        <div class="search">
+             <label for="subject">SEARCH</label>
+             <input class="search-input" type="search" placeholder="LOCATION">
+        </div>
+
+        <div class="min-price">
+             <label for="subject">MIN</label>
+        <select id="min" name="min" required>
+            <option value="">MIN</option>
+            <option value="<100K">< 100K</option>
+            <option value="<300K">< 300K</option>
+            <option value="<500K">< 500K</option>
+        </select>
+        </div>
+        
+
+        <div class="max-price">
+               <label for="subject">MAX</label>
+        <select id="max" name="max" required>
+            <option value="">MAX</option>
+            <option value=">100K">> 100K</option>
+            <option value=">300K">> 300K</option>
+            <option value=">500K">> 500K</option>
+        </select>
+        </div>
+        
+
+        <div class="beds">
+                 <label for="subject">BEDS</label>
+        <select id="beds" name="beds" required>
+            <option value="">BEDS</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value=">5">>5</option>
+        </select>
+        </div>
+        
+
+        
+        <div class="baths">
+             <label for="subject">BATHS</label>
+        <select id="baths" name="baths" required>
+            <option value="">BATHS</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">>2</option>    
+        </select>
+        </div>
+        
+
+   <!--    </div> --> <!-- end search section -->
+
+        
+         <button class="button">UPDATE</button>
+
+        <div class="advanced-search">
+         <a href="advanced-search.html">ADVANCED SEARCH</a>
+         </div>
+
+         
+
+
+
+
+    </div>  <!-- end of Section B -->
+
+    <div class="sectionC">
+        <img class="img" src="images/house1.jpg" alt="house 1">
+    </div>
+
+        <!-- end of Section C -->
+
+        <div class="sectionD">
+        <div class="content">
+       <h3>£324,995</h3>
+       <h4>4 bedroom detached house for sale</h4>
+       <p>Fenton Keillor Estate</p>
+       <p>Main Cross</p>
+       <p>Dundee DD4</p>
+       </div>
+    </div>
+
+    <!-- end of Section D -->
+
+    <div class="sectionE">
+      <img class="img" src="images/house2.jpg" alt="house 2">
+    </div>
+
+      <!-- end of Section E -->
+
+      <div class="sectionF">
+      <div class="content">
+       <h3>£299,995</h3>
+       <h4>4 bedroom detached house for sale</h4>
+       <p>The Leith at Stewarts Loan</p>
+       <p>Kingsway East DD4</p> 
+       </div> 
+    </div>
+
+    <!-- end of Section F -->
+
+    <div class="sectionG">
+      <img class="img" src="images/house3.jpg" alt="house 3">
+    </div>
+
+      <!-- end of Section G -->
+
+      <div class="sectionH">
+      <div class="content">
+        <h3>£264,995</h3>
+        <h4>3 bedroom semi-detached house for sale</h4>
+        <p>The Elgin at Stewarts Loan</p>
+        <p>Kingsway East DD4</p>
+        </div>
+    </div>
+
+    <!-- end of Section H -->
+
+    <div class="sectionI">
+      <img class="img" src="images/house4.jpg" alt="house 4">
+    </div>
+
+      <!-- end of Section I -->
+
+      <div class="sectionJ">
+      <div class="content">
+        <h3>£180,000</h3>
+        <h4>2 bedroom flat for sale</h4>
+        <p>Kemback Walk</p>
+        <p>Angus DD3</p>
+        </div>
+    </div>
+
+    <!-- end of Section J -->
+
+    <div class="sectionK">
+       <img class="img" src="images/house5.jpg" alt="house 5">
+     </div>
+
+       <!-- end of Section K -->
+
+       <div class="sectionL">
+       <div class="content">
+         <h3>£130,000</h3>
+         <h4>3 bedroom semi-detached house for sale</h4>
+         <p>Balmuir Road</p>
+         <p>Angus DD3</p>
+         </div>
+    </div>
+
+    <!-- end of Section L -->
+    
+    <div class="sectionM">
+    
+   <iframe src="https://www.google.com/maps/d/embed?mid=1OBruoIfq3BcMUo2OLLRaOCnNe1rVn7I&hl=en&ehbc=2E312F"
+     width="640" height="1040">
+   </iframe>
+
+    </div>
+
+    <!-- end of Section M -->
+
+    </div>  <!-- end of container grid -->
+
+     <!-- Footer -->
+
+    <footer>
+        <p>@copyright 2026. All rights reserved</p>
+    </footer>
+    
+</body>
+</html>
