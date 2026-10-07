@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Yatching Tours Page" />
+    <meta name="keywords" content="Yatching, Yatcht, water, tours, sailing, holidays" />
+    <meta name="author" content="David Smith" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch11 layout Elegant Yachting Tours</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/8a10e0f309.js" crossorigin="anonymous"></script>
+
+    <style>
+
+        .container-grid {
+            display: grid;
+            grid-template-columns: 250px auto auto auto auto auto auto auto auto auto;
+            grid-template-rows: 100px 100px 200px 50px 100px 260px 40px 170px 400px 200px 300px 100px;
+        }
+
+        /* header section */
+
+       
+
+        .section-Logo {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #666;
+            
+        }
+
+          .section-Search {
+            grid-column: 3 / 5;
+            grid-row: 1 / 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #666;
+            font-family: 'Montserrat', sans-serif;
+        }
+            
+        
+
+          .section-Nav {
+            grid-column: 5 / 9;
+            grid-row: 1 / 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #666;
+            font-family: 'Montserrat', sans-serif;
+        }
+            
+
+        
+
+          .section-Cart {
+            grid-column: 9 / 10;
+            grid-row: 1 / 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #666;
+            color: #e6e6e6;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* services section */
+            
+
+          .heading-Services {
+            grid-column: 1 / 10;
+            grid-row: 2 / 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+          .images-Services {
+            grid-column: 1 / 10;
+            grid-row: 3 / 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+          .button-Services {
+            grid-column: 1 / 10;
+            grid-row: 4 / 5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .buttonG {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px 20px;
+          border-radius: 10px;
+          background-color: #e6e6e6;
+          font-family: 'Montserrat', sans-serif;
+         }
+
+          .buttonG:hover{
+            color: white;
+            background-color: black;
+        }
+
+        /* features section */
+
+          .section-Features {
+            grid-column: 1 / 10;
+            grid-row: 5 / 6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;   
+        }
+
+          .sectionI {
+            grid-column: 1 / 10;
+            grid-row: 6 / 7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .caret-left {
+            padding-right: 120px;
+        }
+
+          .sectionJ {
+            grid-column: 1 / 10;
+            grid-row: 7 / 8;
+            display: flex;
+            justify-content: space-evenly;
+            align-items:center; 
+          line-height: 0.1; 
+           padding-bottom: 26px;
+           font-family: 'Montserrat', sans-serif; 
+        }
+
+        .feature1 {
+            padding-left: 80px;
+        }
+
+        .feature2 {
+            padding-right: 160px;
+        }
+
+        /* news section */
+
+          .section-News {
+            grid-column: 1 / 6;
+            grid-row: 8 / 9;
+            padding-left: 20px;
+            padding-right: 200px;
+            font-family: 'Montserrat', sans-serif; 
+        }
+
+        /* subscription section */
+
+          .section-Subscribe {
+            grid-column: 6 / 10;
+            grid-row: 8 / 9;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif; 
+        }
+
+        /* products section */
+
+          .Products {
+            grid-column: 1 / 6;
+            grid-row: 9 / 10;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+
+          .top-section {
+            display: flex;
+          }
+
+          .bottom-section {
+            display: flex;
+          } 
+
+          .ProductsMore {
+            grid-column: 6 / 10;
+            grid-row: 9 / 10;
+            line-height: 0.1;
+            font-family: 'Montserrat', sans-serif; 
+          }
+
+          /* about section */
+        
+
+          .section-About {
+            grid-column: 1 / 10;
+            grid-row: 10 / 11;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            font-family: 'Montserrat', sans-serif; 
+        }
+
+        /* footer section */
+
+          .Signature {
+            grid-column: 1 / 2;
+            grid-row: 11 / 12;
+            padding-left: 20px;
+            padding-top: 20px;
+            background-color: #666;
+            color: #fff; 
+            font-family: 'Montserrat', sans-serif; 
+        }
+
+          .Menu {
+            grid-column: 2 / 4;
+            grid-row: 11 / 12;
+            display: flex;
+            flex-direction: column;
+            justify-content:start;
+            align-items: center;
+            background-color: #666;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif; 
+        }
+
+          .Company {
+            grid-column: 4 / 7;
+            grid-row: 11 / 12;
+            display: flex;
+            flex-direction: column;
+            justify-content:start;
+            align-items: center;
+            background-color: #666;
+            color: #fff;  
+            font-family: 'Montserrat', sans-serif;    
+        }
+
+         .Discover {
+            grid-column: 7 / 8;
+            grid-row: 11 / 12;
+            display: flex;
+            flex-direction: column;
+            justify-content:start;
+            align-items: center;
+            background-color: #666;
+            color: #fff; 
+            font-family: 'Montserrat', sans-serif; 
+        }
+
+         .Find {
+            grid-column: 8 / 10;
+            grid-row: 11 / 12;
+            display: flex;
+            flex-direction: column;
+            justify-content:start;
+            align-items: center;
+             background-color: #666;
+            color: #fff; 
+            line-height: 30px;
+            font-family: 'Montserrat', sans-serif; 
+        }
+
+         footer {
+            grid-column: 1 / 10;
+            grid-row: 12 / 13;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #4d4a4a;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif; 
+        }
+
+        /* header styles */
+
+         .logo {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px ;
+            padding: 10px;
+         }
+
+         .section-Search .search-input {
+             padding: 10px 10px;
+             border-radius: 20px;
+             box-shadow: rgba(0, 0, 0, 0.2); 
+        }
+
+          nav {
+            background-color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+         nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px; 
+        }
+
+          nav a {
+            color: #e6e6e6;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 12px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #fff;
+            border-bottom: 2px solid #e6e6e6;
+        }
+
+        /* image styles */
+
+         .img { 
+            width: 40%;
+            height: 100%; 
+         } 
+
+         .imgF { 
+            width: 100%;
+            height: 100%; 
+            object-fit: contain;
+         } 
+
+          .imgF:hover {
+            opacity: 0.7;
+         }
+
+         .imgI {
+            width: 60%;
+            height: 60%; 
+            object-fit: contain;
+         }
+
+          .imgI:hover {
+            opacity: 0.7;
+         }
+
+         /* features styles */
+
+         .feature1 {
+            display: flex;
+            flex-direction: column; 
+            text-align: center;
+            font-size: 18px;
+            padding-right: 160px;
+            padding-bottom: 40px;  
+         }
+
+          .feature2 {
+            display: flex;
+            flex-direction: column; 
+            text-align: center;
+            font-size: 18px; 
+            padding-left: 160px;
+             padding-bottom: 40px; 
+         }  
+
+         /* news styles */
+
+         .section-News h2 {
+          font-size: 38px;
+         }
+
+         .section-News p {
+          letter-spacing: 2px;
+         }
+
+         /* form styles */
+
+         .form-outline {
+          display: flex;
+          justify-content:start;
+          align-items: center;
+          width: 400px;
+          height: 140px;
+          background-color: beige;
+          box-shadow: rgba(0, 0, 0, 0.2);
+          padding-left: 10px;
+         }
+
+        form input {
+          padding: 10px 20px;
+         } 
+
+         /* subscribe styles */
+
+         .subscribe-button {
+          padding: 10px 20px;
+          border-radius: 10px;
+          background-color: #e6e6e6;
+         }
+
+          .subscribe-button:hover{
+            color: white;
+            background-color: black;
+        }
+
+        /* about styles */
+
+         .section-About p {
+          text-align: center;
+          line-height: 1.6;
+         }
+
+         /* products styles */
+
+
+         .imgProducts {
+            width: 90%;
+            height: 90%;
+            object-fit: contain;  /* crucial, keeps aspect ratio */
+         }
+
+          .imgProducts:hover {
+            opacity: 0.7;
+         }
+
+
+
+          .imgProductsMore {
+            width: 80%;
+            height: 70%;
+            object-fit: contain;  /* crucial, keeps aspect ratio */
+         }
+
+          .imgProductsMore:hover {
+            opacity: 0.7;
+         }
+
+         
+    
+
+         .ProductsMore h6 {
+             font-size: 10px;
+             font-weight: 300;
+         }
+
+         .ProductsMore p {
+            font-size: 14px;
+         }
+
+         .top {
+          display: flex;
+          text-align: center;
+          padding-top: 26px;
+         }
+
+         .bottom {
+          display: flex;
+          text-align: center;
+         }
+
+         
+
+        /* footer section styles */
+
+        /* menu styles */
+
+           .nav-linksMenu {
+            background-color: #666;
+        }
+
+
+         .nav-linksMenu ul {
+            list-style:disc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+         }
+
+
+         .nav-linksMenu a {
+            color: #e6e6e6;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 2px 4px;
+            transition: all 0.3s ease;
+          }
+
+        .nav-linksMenu a:hover {
+            color: #fff;
+            border-bottom: 2px solid #e6e6e6;
+        }
+
+        /* company styles */
+
+
+        .nav-linksCompany {
+            background-color: #666;
+        }
+
+
+         .nav-linksCompany ul {
+            list-style:disc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+         }
+
+
+         .nav-linksCompany a {
+            color: #e6e6e6;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 2px 4px;
+            transition: all 0.3s ease;
+          }
+
+        .nav-linksCompany a:hover {
+            color: #fff;
+            border-bottom: 2px solid #e6e6e6;
+        }
+
+        /* discover styles */
+
+           .nav-linksDiscover {
+            background-color: #666;
+        }
+
+
+         .nav-linksDiscover ul {
+            list-style:disc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+         }
+
+
+         .nav-linksDiscover a {
+            color: #e6e6e6;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 2px 4px;
+            transition: all 0.3s ease;
+          }
+
+        .nav-linksDiscover a:hover {
+            color: #fff;
+            border-bottom: 2px solid #e6e6e6;
+        }
+
+        /* find us styles */
+
+         .facebook {
+             font-size: 12px;
+             padding-left: 20px;
+             padding-bottom: 40px;
+        }
+
+        .facebook:hover {
+          color: lightblue;
+        }
+
+         .twitter {
+             font-size: 12px;
+             padding-left: 20px;
+             padding-bottom: 40px;  
+        }
+
+        .twitter:hover {
+            color: lightblue;
+        }
+
+
+
+         .instagram {
+             font-size: 12px;
+             padding-left: 20px;
+        }
+
+        .instagram:hover {
+              color: lightblue;
+        }
+
+      
+
+           /* Responsive Design */
+
+        @media (max-width: 768px) {
+            .container-grid {
+                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem; 
+            }
+
+            .imgF {
+              padding: 0px 10px;
+            }
+
+            .caret-right, .caret-left {
+                padding: 0;
+                margin: 0;
+            }
+
+
+            .imgI {
+              padding: 0px 10px;
+              height: 100px;
+              width: 100px;
+              object-fit: contain;
+            }
+
+            .sectionJ {
+                padding: 0;
+                margin: 0;
+                height: 20px;
+            }
+
+
+            .feature1 {
+               padding: 0;
+                margin: 0;
+            } 
+
+           .feature2 {
+               padding: 0;
+                margin: 0;
+            } 
+
+            .section-News {
+                margin: 0 auto;
+                padding: 0;
+                text-align: center;
+                width: 100%;
+            }
+
+            .section-News h2 {
+              font-size: 26px;
+            } 
+
+            .section-News p {
+              font-size: 14px;
+            }
+
+            .section-Subscribe {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            .form-outline {
+               width: 100%;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               max-width: 400px;
+            }
+
+          .Products {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+        }
+
+         .Products figure {
+             /* remove default margin of figure element */
+             margin: 0;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             width: 100%;
+        }
+
+         .imgProducts {
+             width: 90%;
+             height: auto;
+            object-fit: contain;
+        }
+
+            .Signature {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+
+            footer {
+              padding-left: 20px;
+            }
+
+            footer p {
+              font-size: 10px;
+              padding-bottom: 6px;
+            }
+
+          }
+
+
+             /* For smaller phones */
+
+        @media (max-width: 400px) {
+
+            .imgProducts {
+                width: 70%;
+                height: auto;
+           }
+
+           /* removes margin from figure element on images */
+
+        /*   .sectionI figure {
+                margin: 0;
+           } */
+
+           .caret-left, .caret-right {
+            margin: 0;
+            padding: 0;
+           }
+
+          }
+
+         
+          
+
+        
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container-grid">
+
+   <!-- header section -->
+
+
+    <section class="section-Logo">
+      <div class="logo">LOGO</div>
+    </section>
+
+    <section class="section-Search">
+      <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #e6e6e6;"></i>
+      &nbsp;&nbsp;
+      <input class="search-input" type="search" placeholder="Search...">
+    </section>
+
+    <section class="section-Nav">
+       <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="help.html">HELP</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section class="section-Cart">
+      <i class="fa-solid fa-cart-shopping fa-lg" style="color: #e6e6e6;"></i>
+      &nbsp;
+      <h5>YOUR CART</h5>
+    </section>
+
+
+     <!-- services section -->
+
+    <section class="heading-Services">
+      <h1>EXAMPLES OF SERVICES OR PRODUCTS</h1>
+    </section>
+
+    <section class="images-Services">
+       <figure>
+        <img class="imgF" src="images/gallery1.jpg" alt="a boat at sea" />
+       </figure>
+       <figure>
+        <img class="imgF" src="images/gallery1.jpg" alt="a boat at sea" />
+       </figure>
+       <figure>
+        <img class="imgF" src="images/gallery1.jpg" alt="a boat at sea" />
+       </figure>
+      </section>
+
+    <section class="button-Services">
+      <button class="buttonG">SHOP NOW</button>
+    </section>
+
+    <!-- features section -->
+
+    <section class="section-Features">
+      <h1>FEATURED PRODUCTS</h1>
+    </section>
+
+    <section class="sectionI">
+        <div class="caret-left">
+         <i class="fa-solid fa-caret-left fa-2xl" style="color: #000000;"></i>
+        </div>
+      <figure> 
+        <img class="imgI" src="images/gallery1.jpg" alt="a boat at sea" />
+      </figure> 
+      <figure> 
+        <img class="imgI" src="images/gallery1.jpg" alt="a boat at sea" />
+      </figure>  
+        <div class="caret-right">
+         <i class="fa-solid fa-caret-right fa-2xl" style="color: #000000;"></i>
+        </div>
+    </section>
+
+    <section class="sectionJ">
+
+        <div class="feature1">
+          <h6>PRODUCT NAME</h6>
+          <h7>£100</h7>
+      </div>
+
+      <div class="feature2">
+        <h6>PRODUCT NAME</h6>
+        <h7>£100</h7>
+      </div>
+
+    </section>
+
+    <!-- news section -->
+
+    <section class="section-News">
+      <h2>NEWS LETTER</h2>
+      <p>A SHORT DESCRIPTION THAT INVITES USERS
+      TO SIGN UP FOR WEEKLY NEWS ON WHAT
+      THE LATEST PRODUCTS AND SERVICES
+      </p>
+    </section>
+
+    <!-- subscribe section -->
+
+    <section class="section-Subscribe">
+      <div class="form-outline">
+      <form>
+      <label></label>
+      <input type="email" placeholder="EMAIL ADDRESS">
+      <button class="subscribe-button">SUBSCRIBE</button>
+      </form>
+      </div> <!-- end of form outline -->
+    </section>
+
+    <!-- products section -->
+
+    <section class="Products">
+        <figure>
+         <img class="imgProducts" src="images/gallery1.jpg" alt="a boat at sea" />
+        </figure>
+    </section>
+
+    <section class="ProductsMore">
+
+  
+    <div class="top">
+         <div class="one">
+          <figure>
+           <img class="imgProductsMore" src="images/gallery1.jpg" alt="a boat at sea" />
+          </figure>
+        <h6> PRODUCT NAME 1 </h6>
+        <p>£100</p>
+         </div>
+         
+
+         <div class="two">
+           <figure>
+             <img class="imgProductsMore" src="images/gallery1.jpg" alt="a boat at sea" /> 
+           </figure>
+         <h6>PRODUCT NAME 2</h6>
+         <p>£100</p>
+         </div>
+    </div>
+
+     <div class="bottom">
+         <div class="three">
+          <figure>
+           <img class="imgProductsMore" src="images/gallery1.jpg" alt="a boat at sea" />
+          </figure>
+         <h6>PRODUCT NAME 3</h6>
+         <p>£100</p>
+         </div>
+         
+
+         <div class="four">
+          <figure>
+           <img class="imgProductsMore" src="images/gallery1.jpg" alt="a boat at sea" /> 
+          </figure>
+         <h6>PRODUCT NAME 4</h6>
+         <p>£100</p>
+         </div>
+    </div>
+         
+            
+  
+    </section>
+
+    <!-- about section -->
+
+    <section class="section-About">
+      <h1>ABOUT YOUR SHOP</h1>
+      <p>HERE IS WHERE YOU CAN TRY AND CAPTIVATE THE USERS BY PROVIDING
+        THEM WITH SOME BACKGROUND TO YOUR SHOPS EXISTANCE. YOUR MISSION AS 
+        AN ONLINE SHOP AND YOUR VISION FOR THE FUTURE OF YOUR SHOP, PRODUCTS
+        AND SERVICES.
+      </p>
+
+    </section>
+
+    <!-- footer section -->
+
+    <!-- signature section -->
+
+    <section class="Signature">
+        <div class="logo">LOGO</div>
+        <p>3RD PLANET FROM</p>
+        <p>THE SUN, ORION</p>
+        <p>ARIM, MILKY WAY.</p>
+    </section>
+
+    <!-- menu section -->
+
+    <section class="Menu">
+      <h4>MAIN MENU</h4>
+        <nav class="nav-linksMenu">
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="help.html">HELP</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- company section -->
+
+    <section class="Company">
+       <h4>COMPANY</h4>
+         <nav class="nav-linksCompany">
+            <ul>
+                <li><a href="company.html">THE COMPANY</a></li>
+                <li><a href="careers.html">CAREERS</a></li>
+                <li><a href="press.html">PRESS</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- discover section -->
+
+    <section class="Discover">
+        <h4>DISCOVER</h4>
+         <nav class="nav-linksDiscover">
+            <ul>
+                <li><a href="team.html">THE TEAM</a></li>
+                <li><a href="history.html">OUR HISTORY</a></li>
+                <li><a href="brand.html">BRAND MOTTO</a></li>
+            </ul>
+          </nav>
+    </section>
+
+    <!-- find us section -->
+
+    <section class="Find">
+
+      <!-- div elements are block so stop i tag displaying inline -->
+
+      <h4>FIND US ON</h4>
+         <div>
+          <i class="fa-brands fa-facebook-f fa-lg"></i>
+         <span class="facebook">FACEBOOK</span>
+         </div>
+        <div>
+           <i class="fa-brands fa-twitter fa-lg"></i>
+           <span class="twitter">TWITTER</span>
+        </div>
+        <div>
+          <i class="fa-brands fa-instagram fa-lg"></i>
+          <span class="instagram">INSTAGRAM</span>
+        </div>
+    </section>
+
+    <!-- footer section -->
+
+  <!--  <div class="sectionU"> -->
+    <footer>
+      <p>COPYRIGHT 2001, ALL RIGHTS RESERVED COMPANY NAME</p>
+<!--   </div> -->
+   </footer>
+
+   </div>  <!-- end of container grid -->
+
+
+</body>
+</html>
